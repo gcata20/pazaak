@@ -1,2 +1,3 @@
 .venv/
+.dev_reference.txt
 __pycache__
