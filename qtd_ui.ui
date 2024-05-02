@@ -107,9 +107,6 @@
         </property>
        </widget>
        <widget class="QPushButton" name="mm_btn_start">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
         <property name="geometry">
          <rect>
           <x>476</x>
@@ -130,16 +127,20 @@
          <string notr="true"/>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: white</string>
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
         </property>
         <property name="text">
          <string notr="true">START</string>
         </property>
        </widget>
        <widget class="QPushButton" name="mm_btn_help">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
         <property name="geometry">
          <rect>
           <x>476</x>
@@ -160,7 +161,14 @@
          <string notr="true"/>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: white</string>
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
         </property>
         <property name="text">
          <string notr="true">HELP</string>
@@ -187,13 +195,20 @@
          <string notr="true"/>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: white</string>
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
         </property>
         <property name="text">
          <string notr="true">EXIT</string>
         </property>
        </widget>
-       <widget class="QLabel" name="temp_title">
+       <widget class="QLabel" name="temp_mm_title">
         <property name="geometry">
          <rect>
           <x>456</x>
@@ -225,8 +240,249 @@
        <property name="accessibleDescription">
         <string notr="true"/>
        </property>
+       <widget class="QLabel" name="db_bg">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1152</width>
+          <height>864</height>
+         </rect>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>assets/bg_guide.png</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="temp_db_title">
+        <property name="geometry">
+         <rect>
+          <x>446</x>
+          <y>24</y>
+          <width>260</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>Deck Builder</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="db_btn_play">
+        <property name="geometry">
+         <rect>
+          <x>1048</x>
+          <y>40</y>
+          <width>64</width>
+          <height>64</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
+        </property>
+        <property name="text">
+         <string notr="true">&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="db_btn_back">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>64</width>
+          <height>64</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
+        </property>
+        <property name="text">
+         <string notr="true">&lt;</string>
+        </property>
+       </widget>
       </widget>
-      <widget class="QWidget" name="sw_game_screen"/>
+      <widget class="QWidget" name="sw_game_screen">
+       <widget class="QLabel" name="temp_gs_title">
+        <property name="geometry">
+         <rect>
+          <x>436</x>
+          <y>24</y>
+          <width>280</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string>Game Screen</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="gs_bg">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1152</width>
+          <height>864</height>
+         </rect>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>assets/bg_guide.png</pixmap>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="gs_btn_help">
+        <property name="geometry">
+         <rect>
+          <x>544</x>
+          <y>130</y>
+          <width>64</width>
+          <height>64</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
+        </property>
+        <property name="text">
+         <string notr="true">?</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="gs_btn_quit">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>64</width>
+          <height>64</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
+        </property>
+        <property name="text">
+         <string notr="true">&lt;</string>
+        </property>
+       </widget>
+       <zorder>gs_bg</zorder>
+       <zorder>temp_gs_title</zorder>
+       <zorder>gs_btn_help</zorder>
+       <zorder>gs_btn_quit</zorder>
+      </widget>
      </widget>
     </item>
    </layout>

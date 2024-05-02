@@ -51,25 +51,37 @@ class Ui_mw(object):
         self.mm_bg.setPixmap(QtGui.QPixmap("assets/bg_guide.png"))
         self.mm_bg.setObjectName("mm_bg")
         self.mm_btn_start = QtWidgets.QPushButton(self.sw_main_menu)
-        self.mm_btn_start.setEnabled(False)
         self.mm_btn_start.setGeometry(QtCore.QRect(476, 336, 200, 50))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.mm_btn_start.setFont(font)
         self.mm_btn_start.setAccessibleName("")
         self.mm_btn_start.setAccessibleDescription("")
-        self.mm_btn_start.setStyleSheet("background-color: white")
+        self.mm_btn_start.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: red;\n"
+"}\n"
+"")
         self.mm_btn_start.setText("START")
         self.mm_btn_start.setObjectName("mm_btn_start")
         self.mm_btn_help = QtWidgets.QPushButton(self.sw_main_menu)
-        self.mm_btn_help.setEnabled(False)
         self.mm_btn_help.setGeometry(QtCore.QRect(476, 406, 200, 50))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.mm_btn_help.setFont(font)
         self.mm_btn_help.setAccessibleName("")
         self.mm_btn_help.setAccessibleDescription("")
-        self.mm_btn_help.setStyleSheet("background-color: white")
+        self.mm_btn_help.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: red;\n"
+"}\n"
+"")
         self.mm_btn_help.setText("HELP")
         self.mm_btn_help.setObjectName("mm_btn_help")
         self.mm_btn_exit = QtWidgets.QPushButton(self.sw_main_menu)
@@ -79,25 +91,142 @@ class Ui_mw(object):
         self.mm_btn_exit.setFont(font)
         self.mm_btn_exit.setAccessibleName("")
         self.mm_btn_exit.setAccessibleDescription("")
-        self.mm_btn_exit.setStyleSheet("background-color: white")
+        self.mm_btn_exit.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: red;\n"
+"}\n"
+"")
         self.mm_btn_exit.setText("EXIT")
         self.mm_btn_exit.setObjectName("mm_btn_exit")
-        self.temp_title = QtWidgets.QLabel(self.sw_main_menu)
-        self.temp_title.setGeometry(QtCore.QRect(456, 110, 240, 60))
+        self.temp_mm_title = QtWidgets.QLabel(self.sw_main_menu)
+        self.temp_mm_title.setGeometry(QtCore.QRect(456, 110, 240, 60))
         font = QtGui.QFont()
         font.setPointSize(32)
-        self.temp_title.setFont(font)
-        self.temp_title.setStyleSheet("background-color: transparent;")
-        self.temp_title.setAlignment(QtCore.Qt.AlignCenter)
-        self.temp_title.setObjectName("temp_title")
+        self.temp_mm_title.setFont(font)
+        self.temp_mm_title.setStyleSheet("background-color: transparent;")
+        self.temp_mm_title.setAlignment(QtCore.Qt.AlignCenter)
+        self.temp_mm_title.setObjectName("temp_mm_title")
         self.sw.addWidget(self.sw_main_menu)
         self.sw_deck_builder = QtWidgets.QWidget()
         self.sw_deck_builder.setAccessibleName("")
         self.sw_deck_builder.setAccessibleDescription("")
         self.sw_deck_builder.setObjectName("sw_deck_builder")
+        self.db_bg = QtWidgets.QLabel(self.sw_deck_builder)
+        self.db_bg.setGeometry(QtCore.QRect(0, 0, 1152, 864))
+        self.db_bg.setAccessibleName("")
+        self.db_bg.setAccessibleDescription("")
+        self.db_bg.setText("")
+        self.db_bg.setPixmap(QtGui.QPixmap("assets/bg_guide.png"))
+        self.db_bg.setObjectName("db_bg")
+        self.temp_db_title = QtWidgets.QLabel(self.sw_deck_builder)
+        self.temp_db_title.setGeometry(QtCore.QRect(446, 24, 260, 60))
+        font = QtGui.QFont()
+        font.setPointSize(32)
+        self.temp_db_title.setFont(font)
+        self.temp_db_title.setStyleSheet("background-color: transparent;")
+        self.temp_db_title.setAlignment(QtCore.Qt.AlignCenter)
+        self.temp_db_title.setObjectName("temp_db_title")
+        self.db_btn_play = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_btn_play.setGeometry(QtCore.QRect(1048, 40, 64, 64))
+        font = QtGui.QFont()
+        font.setPointSize(32)
+        font.setBold(False)
+        font.setWeight(50)
+        self.db_btn_play.setFont(font)
+        self.db_btn_play.setAccessibleName("")
+        self.db_btn_play.setAccessibleDescription("")
+        self.db_btn_play.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: red;\n"
+"}\n"
+"")
+        self.db_btn_play.setText(">")
+        self.db_btn_play.setObjectName("db_btn_play")
+        self.db_btn_back = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_btn_back.setGeometry(QtCore.QRect(40, 40, 64, 64))
+        font = QtGui.QFont()
+        font.setPointSize(32)
+        font.setBold(False)
+        font.setWeight(50)
+        self.db_btn_back.setFont(font)
+        self.db_btn_back.setAccessibleName("")
+        self.db_btn_back.setAccessibleDescription("")
+        self.db_btn_back.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: red;\n"
+"}\n"
+"")
+        self.db_btn_back.setText("<")
+        self.db_btn_back.setObjectName("db_btn_back")
         self.sw.addWidget(self.sw_deck_builder)
         self.sw_game_screen = QtWidgets.QWidget()
         self.sw_game_screen.setObjectName("sw_game_screen")
+        self.temp_gs_title = QtWidgets.QLabel(self.sw_game_screen)
+        self.temp_gs_title.setGeometry(QtCore.QRect(436, 24, 280, 60))
+        font = QtGui.QFont()
+        font.setPointSize(32)
+        self.temp_gs_title.setFont(font)
+        self.temp_gs_title.setStyleSheet("background-color: transparent;")
+        self.temp_gs_title.setAlignment(QtCore.Qt.AlignCenter)
+        self.temp_gs_title.setObjectName("temp_gs_title")
+        self.gs_bg = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_bg.setGeometry(QtCore.QRect(0, 0, 1152, 864))
+        self.gs_bg.setAccessibleName("")
+        self.gs_bg.setAccessibleDescription("")
+        self.gs_bg.setText("")
+        self.gs_bg.setPixmap(QtGui.QPixmap("assets/bg_guide.png"))
+        self.gs_bg.setObjectName("gs_bg")
+        self.gs_btn_help = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_btn_help.setGeometry(QtCore.QRect(544, 130, 64, 64))
+        font = QtGui.QFont()
+        font.setPointSize(32)
+        font.setBold(False)
+        font.setWeight(50)
+        self.gs_btn_help.setFont(font)
+        self.gs_btn_help.setAccessibleName("")
+        self.gs_btn_help.setAccessibleDescription("")
+        self.gs_btn_help.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: red;\n"
+"}\n"
+"")
+        self.gs_btn_help.setText("?")
+        self.gs_btn_help.setObjectName("gs_btn_help")
+        self.gs_btn_quit = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_btn_quit.setGeometry(QtCore.QRect(40, 40, 64, 64))
+        font = QtGui.QFont()
+        font.setPointSize(32)
+        font.setBold(False)
+        font.setWeight(50)
+        self.gs_btn_quit.setFont(font)
+        self.gs_btn_quit.setAccessibleName("")
+        self.gs_btn_quit.setAccessibleDescription("")
+        self.gs_btn_quit.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    color: red;\n"
+"}\n"
+"")
+        self.gs_btn_quit.setText("<")
+        self.gs_btn_quit.setObjectName("gs_btn_quit")
+        self.gs_bg.raise_()
+        self.temp_gs_title.raise_()
+        self.gs_btn_help.raise_()
+        self.gs_btn_quit.raise_()
         self.sw.addWidget(self.sw_game_screen)
         self.gridLayout.addWidget(self.sw, 1, 0, 1, 1)
         mw.setCentralWidget(self.cw)
@@ -108,4 +237,6 @@ class Ui_mw(object):
 
     def retranslateUi(self, mw):
         _translate = QtCore.QCoreApplication.translate
-        self.temp_title.setText(_translate("mw", "Pazaak"))
+        self.temp_mm_title.setText(_translate("mw", "Pazaak"))
+        self.temp_db_title.setText(_translate("mw", "Deck Builder"))
+        self.temp_gs_title.setText(_translate("mw", "Game Screen"))
