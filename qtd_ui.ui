@@ -60,7 +60,7 @@
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="1" column="0">
+    <item row="0" column="0">
      <widget class="QStackedWidget" name="sw">
       <property name="maximumSize">
        <size>
@@ -226,7 +226,7 @@ QPushButton:hover {
          <string notr="true">background-color: transparent;</string>
         </property>
         <property name="text">
-         <string>Pazaak</string>
+         <string notr="true">Pazaak</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -280,7 +280,7 @@ QPushButton:hover {
          <string notr="true">background-color: transparent;</string>
         </property>
         <property name="text">
-         <string>Deck Builder</string>
+         <string notr="true">Deck Builder</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -378,7 +378,7 @@ QPushButton:hover {
          <string notr="true">background-color: transparent;</string>
         </property>
         <property name="text">
-         <string>Game Screen</string>
+         <string notr="true">Game Screen</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -482,6 +482,121 @@ QPushButton:hover {
        <zorder>temp_gs_title</zorder>
        <zorder>gs_btn_help</zorder>
        <zorder>gs_btn_quit</zorder>
+      </widget>
+      <widget class="QWidget" name="sw_help_screen">
+       <widget class="QLabel" name="temp_hs_title">
+        <property name="geometry">
+         <rect>
+          <x>436</x>
+          <y>24</y>
+          <width>280</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string notr="true">Help Screen</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="hs_btn_close">
+        <property name="geometry">
+         <rect>
+          <x>1050</x>
+          <y>40</y>
+          <width>64</width>
+          <height>64</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: white;
+}
+
+QPushButton:hover {
+    color: red;
+}
+</string>
+        </property>
+        <property name="text">
+         <string notr="true">X</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="hs_bg">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1152</width>
+          <height>864</height>
+         </rect>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>assets/bg_guide.png</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="temp_hs_text">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>192</y>
+          <width>713</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string notr="true">This screen will contain detailed instructions on how to play the game. It can be accessed both from the main menu, before players start the game, as well as from the game screen while playing.</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <zorder>hs_bg</zorder>
+       <zorder>hs_btn_close</zorder>
+       <zorder>temp_hs_title</zorder>
+       <zorder>temp_hs_text</zorder>
       </widget>
      </widget>
     </item>

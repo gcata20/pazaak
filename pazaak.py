@@ -11,11 +11,27 @@ class GameManager:
         UIManager.show_screen(2)
         ...
 
+    @classmethod
+    def toggle_help(cls, source_page_index: int):
+        """Navigate to and from the help screen by storing previous page."""
+        if not source_page_index == 3:
+            cls.index_to_help = source_page_index
+            UIManager.show_screen(3)
+        else:
+            UIManager.show_screen(cls.index_to_help)
+
 
 class UIManager:
     @classmethod
     def show_screen(cls, index: int):
-        """ Navigate the UI's stacked widget by index."""
+        """ Navigate the UI's stacked widget pages by index.
+
+        Index options:
+        - 0: Main Menu
+        - 1: Deck Builder
+        - 2: Game Screen
+        - 3: Help Screen
+        """
         main_win.ui.sw.setCurrentIndex(index)
 
 
@@ -32,14 +48,16 @@ class Pazaak(QtWidgets.QMainWindow):
     def setup_buttons(self):
         # Main Menu buttons.
         self.ui.mm_btn_start.clicked.connect(lambda: UIManager.show_screen(1))
-        self.ui.mm_btn_help.clicked.connect(lambda: print('[DEBUG LOG] HELP button clicked (main menu).'))
+        self.ui.mm_btn_help.clicked.connect(lambda: GameManager.toggle_help(0))
         self.ui.mm_btn_exit.clicked.connect(QtWidgets.QApplication.quit)
         # Deck Builder buttons.
         self.ui.db_btn_back.clicked.connect(lambda: UIManager.show_screen(0))
         self.ui.db_btn_play.clicked.connect(GameManager.start_match)
         # Game Screen buttons.
-        self.ui.gs_btn_help.clicked.connect(lambda: print('[DEBUG LOG] HELP button clicked (game screen).'))
+        self.ui.gs_btn_help.clicked.connect(lambda: GameManager.toggle_help(2))
         self.ui.gs_btn_quit.clicked.connect(lambda: UIManager.show_screen(0))
+        # Help Screen buttons.
+        self.ui.hs_btn_close.clicked.connect(lambda: GameManager.toggle_help(3))
 
 
 if __name__ == '__main__':
