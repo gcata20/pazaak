@@ -40,8 +40,7 @@ class UIManager:
             cls.index_to_help = source_page_index
             cls.show_screen(3)
         else:
-            if cls.index_to_help:
-                cls.show_screen(cls.index_to_help)
+            cls.show_screen(cls.index_to_help)
 
 
 class Pazaak(QtWidgets.QMainWindow):
