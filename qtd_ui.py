@@ -47,8 +47,8 @@ class Ui_mw(object):
         self.mm_bg.setGeometry(QtCore.QRect(0, 0, 1152, 864))
         self.mm_bg.setAccessibleName("")
         self.mm_bg.setAccessibleDescription("")
+        self.mm_bg.setStyleSheet("background-color: lightgray")
         self.mm_bg.setText("")
-        self.mm_bg.setPixmap(QtGui.QPixmap("assets/bg_guide.png"))
         self.mm_bg.setObjectName("mm_bg")
         self.mm_btn_start = QtWidgets.QPushButton(self.sw_main_menu)
         self.mm_btn_start.setGeometry(QtCore.QRect(486, 342, 180, 40))
@@ -62,12 +62,18 @@ class Ui_mw(object):
         self.mm_btn_start.setAccessibleDescription("")
         self.mm_btn_start.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
         self.mm_btn_start.setText("START")
         self.mm_btn_start.setObjectName("mm_btn_start")
         self.mm_btn_help = QtWidgets.QPushButton(self.sw_main_menu)
@@ -82,12 +88,18 @@ class Ui_mw(object):
         self.mm_btn_help.setAccessibleDescription("")
         self.mm_btn_help.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
         self.mm_btn_help.setText("HELP")
         self.mm_btn_help.setObjectName("mm_btn_help")
         self.mm_btn_exit = QtWidgets.QPushButton(self.sw_main_menu)
@@ -102,26 +114,32 @@ class Ui_mw(object):
         self.mm_btn_exit.setAccessibleDescription("")
         self.mm_btn_exit.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
         self.mm_btn_exit.setText("EXIT")
         self.mm_btn_exit.setObjectName("mm_btn_exit")
-        self.temp_db_title_2 = QtWidgets.QLabel(self.sw_main_menu)
-        self.temp_db_title_2.setGeometry(QtCore.QRect(516, 10, 120, 28))
+        self.temp_mm_title = QtWidgets.QLabel(self.sw_main_menu)
+        self.temp_mm_title.setGeometry(QtCore.QRect(392, 108, 369, 109))
         font = QtGui.QFont()
         font.setFamily("Arial")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.temp_db_title_2.setFont(font)
-        self.temp_db_title_2.setStyleSheet("background-color: orange")
-        self.temp_db_title_2.setText("Main Menu")
-        self.temp_db_title_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.temp_db_title_2.setObjectName("temp_db_title_2")
+        font.setPointSize(44)
+        font.setBold(False)
+        font.setWeight(50)
+        self.temp_mm_title.setFont(font)
+        self.temp_mm_title.setStyleSheet("background-color: transparent")
+        self.temp_mm_title.setText("Pazaak")
+        self.temp_mm_title.setAlignment(QtCore.Qt.AlignCenter)
+        self.temp_mm_title.setObjectName("temp_mm_title")
         self.sw.addWidget(self.sw_main_menu)
         self.sw_deck_builder = QtWidgets.QWidget()
         self.sw_deck_builder.setAccessibleName("")
@@ -131,23 +149,11 @@ class Ui_mw(object):
         self.db_bg.setGeometry(QtCore.QRect(0, 0, 1152, 864))
         self.db_bg.setAccessibleName("")
         self.db_bg.setAccessibleDescription("")
+        self.db_bg.setStyleSheet("background-color: lightgray")
         self.db_bg.setText("")
-        self.db_bg.setPixmap(QtGui.QPixmap("assets/bg_guide.png"))
         self.db_bg.setObjectName("db_bg")
-        self.temp_db_title = QtWidgets.QLabel(self.sw_deck_builder)
-        self.temp_db_title.setGeometry(QtCore.QRect(516, 10, 120, 28))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.temp_db_title.setFont(font)
-        self.temp_db_title.setStyleSheet("background-color: orange")
-        self.temp_db_title.setText("Deck Builder")
-        self.temp_db_title.setAlignment(QtCore.Qt.AlignCenter)
-        self.temp_db_title.setObjectName("temp_db_title")
         self.db_btn_play = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_btn_play.setGeometry(QtCore.QRect(952, 20, 180, 40))
+        self.db_btn_play.setGeometry(QtCore.QRect(936, 32, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -158,16 +164,22 @@ class Ui_mw(object):
         self.db_btn_play.setAccessibleDescription("")
         self.db_btn_play.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
-        self.db_btn_play.setText("PLAY MATCH")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_btn_play.setText("PLAY")
         self.db_btn_play.setObjectName("db_btn_play")
         self.db_btn_back = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_btn_back.setGeometry(QtCore.QRect(20, 20, 180, 40))
+        self.db_btn_back.setGeometry(QtCore.QRect(36, 32, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -178,55 +190,639 @@ class Ui_mw(object):
         self.db_btn_back.setAccessibleDescription("")
         self.db_btn_back.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
         self.db_btn_back.setText("BACK TO MAIN")
         self.db_btn_back.setObjectName("db_btn_back")
-        self.sw.addWidget(self.sw_deck_builder)
-        self.sw_game_screen = QtWidgets.QWidget()
-        self.sw_game_screen.setObjectName("sw_game_screen")
-        self.temp_gs_title = QtWidgets.QLabel(self.sw_game_screen)
-        self.temp_gs_title.setGeometry(QtCore.QRect(516, 10, 120, 28))
+        self.db_plus_1 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_plus_1.setGeometry(QtCore.QRect(254, 80, 94, 128))
+        self.db_plus_1.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_plus_1.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("assets/card_base.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_plus_1.setIcon(icon)
+        self.db_plus_1.setIconSize(QtCore.QSize(94, 128))
+        self.db_plus_1.setObjectName("db_plus_1")
+        self.db_plus_2 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_plus_2.setGeometry(QtCore.QRect(364, 80, 94, 128))
+        self.db_plus_2.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_plus_2.setText("")
+        self.db_plus_2.setIcon(icon)
+        self.db_plus_2.setIconSize(QtCore.QSize(94, 128))
+        self.db_plus_2.setObjectName("db_plus_2")
+        self.db_plus_3 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_plus_3.setGeometry(QtCore.QRect(474, 80, 94, 128))
+        self.db_plus_3.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_plus_3.setText("")
+        self.db_plus_3.setIcon(icon)
+        self.db_plus_3.setIconSize(QtCore.QSize(94, 128))
+        self.db_plus_3.setObjectName("db_plus_3")
+        self.db_plus_4 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_plus_4.setGeometry(QtCore.QRect(584, 80, 94, 128))
+        self.db_plus_4.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_plus_4.setText("")
+        self.db_plus_4.setIcon(icon)
+        self.db_plus_4.setIconSize(QtCore.QSize(94, 128))
+        self.db_plus_4.setObjectName("db_plus_4")
+        self.db_plus_5 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_plus_5.setGeometry(QtCore.QRect(694, 80, 94, 128))
+        self.db_plus_5.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_plus_5.setText("")
+        self.db_plus_5.setIcon(icon)
+        self.db_plus_5.setIconSize(QtCore.QSize(94, 128))
+        self.db_plus_5.setObjectName("db_plus_5")
+        self.db_plus_6 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_plus_6.setGeometry(QtCore.QRect(804, 80, 94, 128))
+        self.db_plus_6.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_plus_6.setText("")
+        self.db_plus_6.setIcon(icon)
+        self.db_plus_6.setIconSize(QtCore.QSize(94, 128))
+        self.db_plus_6.setObjectName("db_plus_6")
+        self.db_minus_1 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_minus_1.setGeometry(QtCore.QRect(254, 224, 94, 128))
+        self.db_minus_1.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_minus_1.setText("")
+        self.db_minus_1.setIcon(icon)
+        self.db_minus_1.setIconSize(QtCore.QSize(94, 128))
+        self.db_minus_1.setObjectName("db_minus_1")
+        self.db_minus_2 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_minus_2.setGeometry(QtCore.QRect(364, 224, 94, 128))
+        self.db_minus_2.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_minus_2.setText("")
+        self.db_minus_2.setIcon(icon)
+        self.db_minus_2.setIconSize(QtCore.QSize(94, 128))
+        self.db_minus_2.setObjectName("db_minus_2")
+        self.db_minus_3 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_minus_3.setGeometry(QtCore.QRect(474, 224, 94, 128))
+        self.db_minus_3.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_minus_3.setText("")
+        self.db_minus_3.setIcon(icon)
+        self.db_minus_3.setIconSize(QtCore.QSize(94, 128))
+        self.db_minus_3.setObjectName("db_minus_3")
+        self.db_minus_4 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_minus_4.setGeometry(QtCore.QRect(584, 224, 94, 128))
+        self.db_minus_4.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_minus_4.setText("")
+        self.db_minus_4.setIcon(icon)
+        self.db_minus_4.setIconSize(QtCore.QSize(94, 128))
+        self.db_minus_4.setObjectName("db_minus_4")
+        self.db_minus_5 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_minus_5.setGeometry(QtCore.QRect(694, 224, 94, 128))
+        self.db_minus_5.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_minus_5.setText("")
+        self.db_minus_5.setIcon(icon)
+        self.db_minus_5.setIconSize(QtCore.QSize(94, 128))
+        self.db_minus_5.setObjectName("db_minus_5")
+        self.db_minus_6 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_minus_6.setGeometry(QtCore.QRect(804, 224, 94, 128))
+        self.db_minus_6.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_minus_6.setText("")
+        self.db_minus_6.setIcon(icon)
+        self.db_minus_6.setIconSize(QtCore.QSize(94, 128))
+        self.db_minus_6.setObjectName("db_minus_6")
+        self.db_dual_1 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_dual_1.setGeometry(QtCore.QRect(254, 368, 94, 128))
+        self.db_dual_1.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_dual_1.setText("")
+        self.db_dual_1.setIcon(icon)
+        self.db_dual_1.setIconSize(QtCore.QSize(94, 128))
+        self.db_dual_1.setObjectName("db_dual_1")
+        self.db_dual_2 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_dual_2.setGeometry(QtCore.QRect(364, 368, 94, 128))
+        self.db_dual_2.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_dual_2.setText("")
+        self.db_dual_2.setIcon(icon)
+        self.db_dual_2.setIconSize(QtCore.QSize(94, 128))
+        self.db_dual_2.setObjectName("db_dual_2")
+        self.db_dual_3 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_dual_3.setGeometry(QtCore.QRect(474, 368, 94, 128))
+        self.db_dual_3.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_dual_3.setText("")
+        self.db_dual_3.setIcon(icon)
+        self.db_dual_3.setIconSize(QtCore.QSize(94, 128))
+        self.db_dual_3.setObjectName("db_dual_3")
+        self.db_dual_4 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_dual_4.setGeometry(QtCore.QRect(586, 368, 94, 128))
+        self.db_dual_4.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_dual_4.setText("")
+        self.db_dual_4.setIcon(icon)
+        self.db_dual_4.setIconSize(QtCore.QSize(94, 128))
+        self.db_dual_4.setObjectName("db_dual_4")
+        self.db_dual_5 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_dual_5.setGeometry(QtCore.QRect(694, 368, 94, 128))
+        self.db_dual_5.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_dual_5.setText("")
+        self.db_dual_5.setIcon(icon)
+        self.db_dual_5.setIconSize(QtCore.QSize(94, 128))
+        self.db_dual_5.setObjectName("db_dual_5")
+        self.db_dual_6 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_dual_6.setGeometry(QtCore.QRect(804, 368, 94, 128))
+        self.db_dual_6.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_dual_6.setText("")
+        self.db_dual_6.setIcon(icon)
+        self.db_dual_6.setIconSize(QtCore.QSize(94, 128))
+        self.db_dual_6.setObjectName("db_dual_6")
+        self.db_btn_random = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_btn_random.setGeometry(QtCore.QRect(630, 786, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.temp_gs_title.setFont(font)
-        self.temp_gs_title.setStyleSheet("background-color: orange")
-        self.temp_gs_title.setText("Game Screen")
-        self.temp_gs_title.setAlignment(QtCore.Qt.AlignCenter)
-        self.temp_gs_title.setObjectName("temp_gs_title")
+        self.db_btn_random.setFont(font)
+        self.db_btn_random.setAccessibleName("")
+        self.db_btn_random.setAccessibleDescription("")
+        self.db_btn_random.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    color: red;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_btn_random.setText("RANDOMIZE")
+        self.db_btn_random.setObjectName("db_btn_random")
+        self.db_btn_clear = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_btn_clear.setGeometry(QtCore.QRect(342, 786, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.db_btn_clear.setFont(font)
+        self.db_btn_clear.setAccessibleName("")
+        self.db_btn_clear.setAccessibleDescription("")
+        self.db_btn_clear.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    color: red;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_btn_clear.setText("CLEAR")
+        self.db_btn_clear.setObjectName("db_btn_clear")
+        self.db_deck_5 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_5.setGeometry(QtCore.QRect(478, 612, 94, 128))
+        self.db_deck_5.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_5.setText("")
+        self.db_deck_5.setIcon(icon)
+        self.db_deck_5.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_5.setObjectName("db_deck_5")
+        self.db_deck_4 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_4.setGeometry(QtCore.QRect(376, 612, 94, 128))
+        self.db_deck_4.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_4.setText("")
+        self.db_deck_4.setIcon(icon)
+        self.db_deck_4.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_4.setObjectName("db_deck_4")
+        self.db_deck_3 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_3.setGeometry(QtCore.QRect(274, 612, 94, 128))
+        self.db_deck_3.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_3.setText("")
+        self.db_deck_3.setIcon(icon)
+        self.db_deck_3.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_3.setObjectName("db_deck_3")
+        self.db_deck_2 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_2.setGeometry(QtCore.QRect(172, 612, 94, 128))
+        self.db_deck_2.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_2.setText("")
+        self.db_deck_2.setIcon(icon)
+        self.db_deck_2.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_2.setObjectName("db_deck_2")
+        self.db_deck_1 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_1.setGeometry(QtCore.QRect(70, 612, 94, 128))
+        self.db_deck_1.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_1.setText("")
+        self.db_deck_1.setIcon(icon)
+        self.db_deck_1.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_1.setObjectName("db_deck_1")
+        self.db_deck_6 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_6.setGeometry(QtCore.QRect(580, 612, 94, 128))
+        self.db_deck_6.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_6.setText("")
+        self.db_deck_6.setIcon(icon)
+        self.db_deck_6.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_6.setObjectName("db_deck_6")
+        self.db_deck_7 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_7.setGeometry(QtCore.QRect(682, 612, 94, 128))
+        self.db_deck_7.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_7.setText("")
+        self.db_deck_7.setIcon(icon)
+        self.db_deck_7.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_7.setObjectName("db_deck_7")
+        self.db_deck_8 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_8.setGeometry(QtCore.QRect(784, 612, 94, 128))
+        self.db_deck_8.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_8.setText("")
+        self.db_deck_8.setIcon(icon)
+        self.db_deck_8.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_8.setObjectName("db_deck_8")
+        self.db_deck_9 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_9.setGeometry(QtCore.QRect(886, 612, 94, 128))
+        self.db_deck_9.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_9.setText("")
+        self.db_deck_9.setIcon(icon)
+        self.db_deck_9.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_9.setObjectName("db_deck_9")
+        self.db_deck_10 = QtWidgets.QPushButton(self.sw_deck_builder)
+        self.db_deck_10.setGeometry(QtCore.QRect(988, 612, 94, 128))
+        self.db_deck_10.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.db_deck_10.setText("")
+        self.db_deck_10.setIcon(icon)
+        self.db_deck_10.setIconSize(QtCore.QSize(94, 128))
+        self.db_deck_10.setObjectName("db_deck_10")
+        self.temp_db_text_available = QtWidgets.QLabel(self.sw_deck_builder)
+        self.temp_db_text_available.setGeometry(QtCore.QRect(458, 26, 236, 32))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.temp_db_text_available.setFont(font)
+        self.temp_db_text_available.setStyleSheet("color: white")
+        self.temp_db_text_available.setText("CARDS AVAILABLE")
+        self.temp_db_text_available.setAlignment(QtCore.Qt.AlignCenter)
+        self.temp_db_text_available.setObjectName("temp_db_text_available")
+        self.temp_db_text_deck = QtWidgets.QLabel(self.sw_deck_builder)
+        self.temp_db_text_deck.setGeometry(QtCore.QRect(498, 558, 154, 32))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.temp_db_text_deck.setFont(font)
+        self.temp_db_text_deck.setStyleSheet("color: white")
+        self.temp_db_text_deck.setText("YOUR DECK")
+        self.temp_db_text_deck.setAlignment(QtCore.Qt.AlignCenter)
+        self.temp_db_text_deck.setObjectName("temp_db_text_deck")
+        self.sw.addWidget(self.sw_deck_builder)
+        self.sw_game_screen = QtWidgets.QWidget()
+        self.sw_game_screen.setObjectName("sw_game_screen")
         self.gs_bg = QtWidgets.QLabel(self.sw_game_screen)
         self.gs_bg.setGeometry(QtCore.QRect(0, 0, 1152, 864))
         self.gs_bg.setAccessibleName("")
         self.gs_bg.setAccessibleDescription("")
+        self.gs_bg.setStyleSheet("background-color: lightgray")
         self.gs_bg.setText("")
-        self.gs_bg.setPixmap(QtGui.QPixmap("assets/bg_guide.png"))
         self.gs_bg.setObjectName("gs_bg")
         self.gs_btn_help = QtWidgets.QPushButton(self.sw_game_screen)
-        self.gs_btn_help.setGeometry(QtCore.QRect(16, 818, 32, 32))
+        self.gs_btn_help.setGeometry(QtCore.QRect(560, 40, 40, 40))
         font = QtGui.QFont()
-        font.setPointSize(16)
+        font.setPointSize(20)
+        font.setBold(False)
+        font.setWeight(50)
         self.gs_btn_help.setFont(font)
         self.gs_btn_help.setAccessibleName("")
         self.gs_btn_help.setAccessibleDescription("")
         self.gs_btn_help.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
         self.gs_btn_help.setText("?")
         self.gs_btn_help.setObjectName("gs_btn_help")
         self.gs_btn_quit = QtWidgets.QPushButton(self.sw_game_screen)
-        self.gs_btn_quit.setGeometry(QtCore.QRect(846, 790, 180, 40))
+        self.gs_btn_quit.setGeometry(QtCore.QRect(764, 800, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -237,35 +833,450 @@ class Ui_mw(object):
         self.gs_btn_quit.setAccessibleDescription("")
         self.gs_btn_quit.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
         self.gs_btn_quit.setText("QUIT MATCH")
         self.gs_btn_quit.setObjectName("gs_btn_quit")
-        self.gs_bg.raise_()
-        self.temp_gs_title.raise_()
-        self.gs_btn_help.raise_()
-        self.gs_btn_quit.raise_()
-        self.sw.addWidget(self.sw_game_screen)
-        self.sw_help_screen = QtWidgets.QWidget()
-        self.sw_help_screen.setObjectName("sw_help_screen")
-        self.temp_hs_title = QtWidgets.QLabel(self.sw_help_screen)
-        self.temp_hs_title.setGeometry(QtCore.QRect(516, 10, 120, 28))
+        self.gs_opp_slot_1 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_1.setGeometry(QtCore.QRect(696, 112, 94, 128))
+        self.gs_opp_slot_1.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_1.setText("")
+        self.gs_opp_slot_1.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_1.setObjectName("gs_opp_slot_1")
+        self.gs_opp_slot_2 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_2.setGeometry(QtCore.QRect(806, 112, 94, 128))
+        self.gs_opp_slot_2.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_2.setText("")
+        self.gs_opp_slot_2.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_2.setObjectName("gs_opp_slot_2")
+        self.gs_opp_slot_3 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_3.setGeometry(QtCore.QRect(916, 112, 94, 128))
+        self.gs_opp_slot_3.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_3.setText("")
+        self.gs_opp_slot_3.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_3.setObjectName("gs_opp_slot_3")
+        self.gs_opp_slot_4 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_4.setGeometry(QtCore.QRect(696, 250, 94, 128))
+        self.gs_opp_slot_4.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_4.setText("")
+        self.gs_opp_slot_4.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_4.setObjectName("gs_opp_slot_4")
+        self.gs_opp_slot_5 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_5.setGeometry(QtCore.QRect(806, 250, 94, 128))
+        self.gs_opp_slot_5.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_5.setText("")
+        self.gs_opp_slot_5.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_5.setObjectName("gs_opp_slot_5")
+        self.gs_opp_slot_6 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_6.setGeometry(QtCore.QRect(916, 250, 94, 128))
+        self.gs_opp_slot_6.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_6.setText("")
+        self.gs_opp_slot_6.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_6.setObjectName("gs_opp_slot_6")
+        self.gs_opp_slot_7 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_7.setGeometry(QtCore.QRect(696, 388, 94, 128))
+        self.gs_opp_slot_7.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_7.setText("")
+        self.gs_opp_slot_7.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_7.setObjectName("gs_opp_slot_7")
+        self.gs_opp_slot_8 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_8.setGeometry(QtCore.QRect(806, 388, 94, 128))
+        self.gs_opp_slot_8.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_8.setText("")
+        self.gs_opp_slot_8.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_8.setObjectName("gs_opp_slot_8")
+        self.gs_opp_slot_9 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_slot_9.setGeometry(QtCore.QRect(916, 388, 94, 128))
+        self.gs_opp_slot_9.setStyleSheet("background-color: transparent")
+        self.gs_opp_slot_9.setText("")
+        self.gs_opp_slot_9.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_opp_slot_9.setObjectName("gs_opp_slot_9")
+        self.gs_player_slot_1 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_1.setGeometry(QtCore.QRect(142, 112, 94, 128))
+        self.gs_player_slot_1.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_1.setText("")
+        self.gs_player_slot_1.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_1.setObjectName("gs_player_slot_1")
+        self.gs_player_slot_2 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_2.setGeometry(QtCore.QRect(252, 112, 94, 128))
+        self.gs_player_slot_2.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_2.setText("")
+        self.gs_player_slot_2.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_2.setObjectName("gs_player_slot_2")
+        self.gs_player_slot_3 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_3.setGeometry(QtCore.QRect(362, 112, 94, 128))
+        self.gs_player_slot_3.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_3.setText("")
+        self.gs_player_slot_3.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_3.setObjectName("gs_player_slot_3")
+        self.gs_player_slot_4 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_4.setGeometry(QtCore.QRect(142, 250, 94, 128))
+        self.gs_player_slot_4.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_4.setText("")
+        self.gs_player_slot_4.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_4.setObjectName("gs_player_slot_4")
+        self.gs_player_slot_5 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_5.setGeometry(QtCore.QRect(252, 250, 94, 128))
+        self.gs_player_slot_5.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_5.setText("")
+        self.gs_player_slot_5.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_5.setObjectName("gs_player_slot_5")
+        self.gs_player_slot_6 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_6.setGeometry(QtCore.QRect(362, 250, 94, 128))
+        self.gs_player_slot_6.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_6.setText("")
+        self.gs_player_slot_6.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_6.setObjectName("gs_player_slot_6")
+        self.gs_player_slot_7 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_7.setGeometry(QtCore.QRect(142, 388, 94, 128))
+        self.gs_player_slot_7.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_7.setText("")
+        self.gs_player_slot_7.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_7.setObjectName("gs_player_slot_7")
+        self.gs_player_slot_8 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_8.setGeometry(QtCore.QRect(252, 388, 94, 128))
+        self.gs_player_slot_8.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_8.setText("")
+        self.gs_player_slot_8.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_8.setObjectName("gs_player_slot_8")
+        self.gs_player_slot_9 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_slot_9.setGeometry(QtCore.QRect(362, 388, 94, 128))
+        self.gs_player_slot_9.setStyleSheet("background-color: transparent")
+        self.gs_player_slot_9.setText("")
+        self.gs_player_slot_9.setPixmap(QtGui.QPixmap("assets/card_base.png"))
+        self.gs_player_slot_9.setObjectName("gs_player_slot_9")
+        self.gs_player_hand_1 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_player_hand_1.setGeometry(QtCore.QRect(90, 574, 94, 128))
+        self.gs_player_hand_1.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_player_hand_1.setText("")
+        self.gs_player_hand_1.setIcon(icon)
+        self.gs_player_hand_1.setIconSize(QtCore.QSize(94, 128))
+        self.gs_player_hand_1.setObjectName("gs_player_hand_1")
+        self.gs_player_hand_2 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_player_hand_2.setGeometry(QtCore.QRect(198, 574, 94, 128))
+        self.gs_player_hand_2.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_player_hand_2.setText("")
+        self.gs_player_hand_2.setIcon(icon)
+        self.gs_player_hand_2.setIconSize(QtCore.QSize(94, 128))
+        self.gs_player_hand_2.setObjectName("gs_player_hand_2")
+        self.gs_player_hand_3 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_player_hand_3.setGeometry(QtCore.QRect(306, 574, 94, 128))
+        self.gs_player_hand_3.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_player_hand_3.setText("")
+        self.gs_player_hand_3.setIcon(icon)
+        self.gs_player_hand_3.setIconSize(QtCore.QSize(94, 128))
+        self.gs_player_hand_3.setObjectName("gs_player_hand_3")
+        self.gs_player_hand_4 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_player_hand_4.setGeometry(QtCore.QRect(414, 574, 94, 128))
+        self.gs_player_hand_4.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_player_hand_4.setText("")
+        self.gs_player_hand_4.setIcon(icon)
+        self.gs_player_hand_4.setIconSize(QtCore.QSize(94, 128))
+        self.gs_player_hand_4.setObjectName("gs_player_hand_4")
+        self.gs_opp_hand_1 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_hand_1.setGeometry(QtCore.QRect(644, 574, 94, 128))
+        self.gs_opp_hand_1.setStyleSheet("background-color: transparent")
+        self.gs_opp_hand_1.setText("")
+        self.gs_opp_hand_1.setPixmap(QtGui.QPixmap("assets/card_back.png"))
+        self.gs_opp_hand_1.setObjectName("gs_opp_hand_1")
+        self.gs_opp_hand_2 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_hand_2.setGeometry(QtCore.QRect(752, 574, 94, 128))
+        self.gs_opp_hand_2.setStyleSheet("background-color: transparent")
+        self.gs_opp_hand_2.setText("")
+        self.gs_opp_hand_2.setPixmap(QtGui.QPixmap("assets/card_back.png"))
+        self.gs_opp_hand_2.setObjectName("gs_opp_hand_2")
+        self.gs_opp_hand_3 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_hand_3.setGeometry(QtCore.QRect(860, 574, 94, 128))
+        self.gs_opp_hand_3.setStyleSheet("background-color: transparent")
+        self.gs_opp_hand_3.setText("")
+        self.gs_opp_hand_3.setPixmap(QtGui.QPixmap("assets/card_back.png"))
+        self.gs_opp_hand_3.setObjectName("gs_opp_hand_3")
+        self.gs_opp_hand_4 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_hand_4.setGeometry(QtCore.QRect(968, 574, 94, 128))
+        self.gs_opp_hand_4.setStyleSheet("background-color: transparent")
+        self.gs_opp_hand_4.setText("")
+        self.gs_opp_hand_4.setPixmap(QtGui.QPixmap("assets/card_back.png"))
+        self.gs_opp_hand_4.setObjectName("gs_opp_hand_4")
+        self.gs_player_turn = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_turn.setGeometry(QtCore.QRect(66, 30, 60, 60))
+        self.gs_player_turn.setStyleSheet("background-color: transparent")
+        self.gs_player_turn.setText("")
+        self.gs_player_turn.setPixmap(QtGui.QPixmap("assets/turn_indicator.png"))
+        self.gs_player_turn.setObjectName("gs_player_turn")
+        self.gs_opp_turn = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_turn.setGeometry(QtCore.QRect(1026, 30, 60, 60))
+        self.gs_opp_turn.setStyleSheet("background-color: transparent")
+        self.gs_opp_turn.setText("")
+        self.gs_opp_turn.setPixmap(QtGui.QPixmap("assets/turn_indicator.png"))
+        self.gs_opp_turn.setObjectName("gs_opp_turn")
+        self.gs_player_set_1 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_set_1.setGeometry(QtCore.QRect(76, 112, 40, 40))
+        self.gs_player_set_1.setStyleSheet("background-color: transparent")
+        self.gs_player_set_1.setText("")
+        self.gs_player_set_1.setPixmap(QtGui.QPixmap("assets/set_inactive.png"))
+        self.gs_player_set_1.setObjectName("gs_player_set_1")
+        self.gs_player_set_2 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_set_2.setGeometry(QtCore.QRect(76, 160, 40, 40))
+        self.gs_player_set_2.setStyleSheet("background-color: transparent")
+        self.gs_player_set_2.setText("")
+        self.gs_player_set_2.setPixmap(QtGui.QPixmap("assets/set_inactive.png"))
+        self.gs_player_set_2.setObjectName("gs_player_set_2")
+        self.gs_player_set_3 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_set_3.setGeometry(QtCore.QRect(76, 208, 40, 40))
+        self.gs_player_set_3.setStyleSheet("background-color: transparent")
+        self.gs_player_set_3.setText("")
+        self.gs_player_set_3.setPixmap(QtGui.QPixmap("assets/set_inactive.png"))
+        self.gs_player_set_3.setObjectName("gs_player_set_3")
+        self.gs_opp_set_3 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_set_3.setGeometry(QtCore.QRect(1036, 208, 40, 40))
+        self.gs_opp_set_3.setStyleSheet("background-color: transparent")
+        self.gs_opp_set_3.setText("")
+        self.gs_opp_set_3.setPixmap(QtGui.QPixmap("assets/set_inactive.png"))
+        self.gs_opp_set_3.setObjectName("gs_opp_set_3")
+        self.gs_opp_set_2 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_set_2.setGeometry(QtCore.QRect(1036, 160, 40, 40))
+        self.gs_opp_set_2.setStyleSheet("background-color: transparent")
+        self.gs_opp_set_2.setText("")
+        self.gs_opp_set_2.setPixmap(QtGui.QPixmap("assets/set_inactive.png"))
+        self.gs_opp_set_2.setObjectName("gs_opp_set_2")
+        self.gs_opp_set_1 = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_set_1.setGeometry(QtCore.QRect(1036, 112, 40, 40))
+        self.gs_opp_set_1.setStyleSheet("background-color: transparent")
+        self.gs_opp_set_1.setText("")
+        self.gs_opp_set_1.setPixmap(QtGui.QPixmap("assets/set_inactive.png"))
+        self.gs_opp_set_1.setObjectName("gs_opp_set_1")
+        self.gs_btn_endturn = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_btn_endturn.setGeometry(QtCore.QRect(656, 724, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.temp_hs_title.setFont(font)
-        self.temp_hs_title.setStyleSheet("background-color: orange")
-        self.temp_hs_title.setText("Help Screen")
-        self.temp_hs_title.setAlignment(QtCore.Qt.AlignCenter)
-        self.temp_hs_title.setObjectName("temp_hs_title")
+        self.gs_btn_endturn.setFont(font)
+        self.gs_btn_endturn.setAccessibleName("")
+        self.gs_btn_endturn.setAccessibleDescription("")
+        self.gs_btn_endturn.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    color: red;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_btn_endturn.setText("END TURN")
+        self.gs_btn_endturn.setObjectName("gs_btn_endturn")
+        self.gs_btn_stand = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_btn_stand.setGeometry(QtCore.QRect(870, 724, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.gs_btn_stand.setFont(font)
+        self.gs_btn_stand.setAccessibleName("")
+        self.gs_btn_stand.setAccessibleDescription("")
+        self.gs_btn_stand.setStyleSheet("QPushButton {\n"
+"    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    color: red;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_btn_stand.setText("STAND")
+        self.gs_btn_stand.setObjectName("gs_btn_stand")
+        self.gs_flip_1 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_flip_1.setGeometry(QtCore.QRect(120, 712, 36, 36))
+        self.gs_flip_1.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_flip_1.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("assets/flip_card.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.gs_flip_1.setIcon(icon1)
+        self.gs_flip_1.setIconSize(QtCore.QSize(36, 36))
+        self.gs_flip_1.setObjectName("gs_flip_1")
+        self.gs_flip_2 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_flip_2.setGeometry(QtCore.QRect(228, 712, 36, 36))
+        self.gs_flip_2.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_flip_2.setText("")
+        self.gs_flip_2.setIcon(icon1)
+        self.gs_flip_2.setIconSize(QtCore.QSize(36, 36))
+        self.gs_flip_2.setObjectName("gs_flip_2")
+        self.gs_flip_3 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_flip_3.setGeometry(QtCore.QRect(336, 712, 36, 36))
+        self.gs_flip_3.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_flip_3.setText("")
+        self.gs_flip_3.setIcon(icon1)
+        self.gs_flip_3.setIconSize(QtCore.QSize(36, 36))
+        self.gs_flip_3.setObjectName("gs_flip_3")
+        self.gs_flip_4 = QtWidgets.QPushButton(self.sw_game_screen)
+        self.gs_flip_4.setGeometry(QtCore.QRect(444, 712, 36, 36))
+        self.gs_flip_4.setStyleSheet("QPushButton {\n"
+"    background-color: transparent;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    border: 2px solid red;\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
+        self.gs_flip_4.setText("")
+        self.gs_flip_4.setIcon(icon1)
+        self.gs_flip_4.setIconSize(QtCore.QSize(36, 36))
+        self.gs_flip_4.setObjectName("gs_flip_4")
+        self.temp_gs_player_name = QtWidgets.QLabel(self.sw_game_screen)
+        self.temp_gs_player_name.setGeometry(QtCore.QRect(142, 44, 107, 32))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.temp_gs_player_name.setFont(font)
+        self.temp_gs_player_name.setStyleSheet("color: yellow")
+        self.temp_gs_player_name.setText(" PLAYER")
+        self.temp_gs_player_name.setObjectName("temp_gs_player_name")
+        self.temp_gs_opp_name = QtWidgets.QLabel(self.sw_game_screen)
+        self.temp_gs_opp_name.setGeometry(QtCore.QRect(864, 44, 146, 32))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.temp_gs_opp_name.setFont(font)
+        self.temp_gs_opp_name.setStyleSheet("color: yellow")
+        self.temp_gs_opp_name.setText("OPPONENT ")
+        self.temp_gs_opp_name.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.temp_gs_opp_name.setObjectName("temp_gs_opp_name")
+        self.gs_player_total = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_player_total.setGeometry(QtCore.QRect(424, 44, 32, 32))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.gs_player_total.setFont(font)
+        self.gs_player_total.setStyleSheet("color: white")
+        self.gs_player_total.setText("##")
+        self.gs_player_total.setAlignment(QtCore.Qt.AlignCenter)
+        self.gs_player_total.setObjectName("gs_player_total")
+        self.gs_opp_total = QtWidgets.QLabel(self.sw_game_screen)
+        self.gs_opp_total.setGeometry(QtCore.QRect(696, 44, 32, 32))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.gs_opp_total.setFont(font)
+        self.gs_opp_total.setStyleSheet("color: white")
+        self.gs_opp_total.setText("##")
+        self.gs_opp_total.setAlignment(QtCore.Qt.AlignCenter)
+        self.gs_opp_total.setObjectName("gs_opp_total")
+        self.sw.addWidget(self.sw_game_screen)
+        self.sw_help_screen = QtWidgets.QWidget()
+        self.sw_help_screen.setObjectName("sw_help_screen")
         self.hs_btn_close = QtWidgets.QPushButton(self.sw_help_screen)
-        self.hs_btn_close.setGeometry(QtCore.QRect(20, 20, 180, 40))
+        self.hs_btn_close.setGeometry(QtCore.QRect(36, 32, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -276,53 +1287,58 @@ class Ui_mw(object):
         self.hs_btn_close.setAccessibleDescription("")
         self.hs_btn_close.setStyleSheet("QPushButton {\n"
 "    background-color: white;\n"
+"    border: 2px solid white;\n"
+"    border-radius: 8px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
+"    border: 2px solid red;\n"
 "    color: red;\n"
 "}\n"
-"")
+"\n"
+"QPushButton:pressed {\n"
+"    border: none;\n"
+"}")
         self.hs_btn_close.setText("BACK")
         self.hs_btn_close.setObjectName("hs_btn_close")
         self.hs_bg = QtWidgets.QLabel(self.sw_help_screen)
         self.hs_bg.setGeometry(QtCore.QRect(0, 0, 1152, 864))
         self.hs_bg.setAccessibleName("")
         self.hs_bg.setAccessibleDescription("")
+        self.hs_bg.setStyleSheet("background-color: lightgray")
         self.hs_bg.setText("")
-        self.hs_bg.setPixmap(QtGui.QPixmap("assets/bg_guide.png"))
         self.hs_bg.setObjectName("hs_bg")
         self.temp_hs_text = QtWidgets.QLabel(self.sw_help_screen)
-        self.temp_hs_text.setGeometry(QtCore.QRect(46, 72, 1060, 720))
+        self.temp_hs_text.setGeometry(QtCore.QRect(46, 74, 1060, 720))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(20)
         font.setBold(False)
         font.setWeight(50)
         self.temp_hs_text.setFont(font)
-        self.temp_hs_text.setStyleSheet("background-color: lightgray")
+        self.temp_hs_text.setStyleSheet("background-color: transparent")
         self.temp_hs_text.setText("Pazaak is a game similar to Blackjack.\n"
 "- players must reach a total of 20 (or as close as possible) without going over\n"
 "- the player with the higher total wins the set\n"
 "- 3 sets win the match\n"
 "\n"
-"At the beginning of the match, you will choose 10 cards to add to your side deck. 4 of these cards will be randomly dealt to your hand. You may play cards from your hand to manipulate the total value on the table.\n"
+"At the beginning of the match, you will choose 10 cards to add to your deck. 4 of these cards will be randomly dealt to your hand. You may play cards from your hand to manipulate the total value on the table.\n"
 "- you will only get one hand per match (make these cards last :)\n"
 "- you may only play one hand card per turn\n"
 "- dual cards (-/+) can be flipped to choose which action you want them to perform\n"
 "\n"
 "The game is turn based.\n"
 "- players draw a card from the house\'s deck at the beginning of their turn\n"
-"- then, they may choose to play a card from hand (or not, strategy is key ;)\n"
+"- on their turn, they may choose to play a card from hand (or not, strategy is key ;)\n"
 "- finally, they can do one of two things:\n"
 "[1] end turn, to pass the turn to the opponent\n"
-"- at the end of their turn, if the player has a total over 20, they automatically lose the set\n"
+"- at the end of their turn, if a player\'s total exceeds 20, they automatically lose the set\n"
 "[2] stand, if they\'re happy with the total value on their side of the table\n"
 "- if standing, they will not draw or play any additional cards during that set")
         self.temp_hs_text.setWordWrap(True)
         self.temp_hs_text.setObjectName("temp_hs_text")
         self.hs_bg.raise_()
         self.hs_btn_close.raise_()
-        self.temp_hs_title.raise_()
         self.temp_hs_text.raise_()
         self.sw.addWidget(self.sw_help_screen)
         self.gridLayout.addWidget(self.sw, 0, 0, 1, 1)
