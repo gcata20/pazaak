@@ -32,12 +32,16 @@ class UIManager:
 
     @classmethod
     def toggle_help(cls, source_page_index: int):
-        """Navigate to and from the help screen by storing previous page."""
+        """Navigate to and from the help screen from anywhere.
+
+        Achieved by storing the page from where the help screen was accessed.
+        """
         if not source_page_index == 3:
             cls.index_to_help = source_page_index
             cls.show_screen(3)
         else:
-            cls.show_screen(cls.index_to_help)
+            if cls.index_to_help:
+                cls.show_screen(cls.index_to_help)
 
 
 class Pazaak(QtWidgets.QMainWindow):
