@@ -205,7 +205,7 @@ class Ui_mw(object):
         self.db_btn_back.setText("BACK TO MAIN")
         self.db_btn_back.setObjectName("db_btn_back")
         self.db_plus_1 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_plus_1.setGeometry(QtCore.QRect(254, 80, 94, 128))
+        self.db_plus_1.setGeometry(QtCore.QRect(254, 72, 94, 128))
         self.db_plus_1.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -220,12 +220,12 @@ class Ui_mw(object):
 "}")
         self.db_plus_1.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("assets/card_base.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("assets/card_plus_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.db_plus_1.setIcon(icon)
         self.db_plus_1.setIconSize(QtCore.QSize(94, 128))
         self.db_plus_1.setObjectName("db_plus_1")
         self.db_plus_2 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_plus_2.setGeometry(QtCore.QRect(364, 80, 94, 128))
+        self.db_plus_2.setGeometry(QtCore.QRect(364, 72, 94, 128))
         self.db_plus_2.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -239,11 +239,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_plus_2.setText("")
-        self.db_plus_2.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("assets/card_plus_2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_plus_2.setIcon(icon1)
         self.db_plus_2.setIconSize(QtCore.QSize(94, 128))
         self.db_plus_2.setObjectName("db_plus_2")
         self.db_plus_3 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_plus_3.setGeometry(QtCore.QRect(474, 80, 94, 128))
+        self.db_plus_3.setGeometry(QtCore.QRect(474, 72, 94, 128))
         self.db_plus_3.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -257,11 +259,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_plus_3.setText("")
-        self.db_plus_3.setIcon(icon)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("assets/card_plus_3.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_plus_3.setIcon(icon2)
         self.db_plus_3.setIconSize(QtCore.QSize(94, 128))
         self.db_plus_3.setObjectName("db_plus_3")
         self.db_plus_4 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_plus_4.setGeometry(QtCore.QRect(584, 80, 94, 128))
+        self.db_plus_4.setGeometry(QtCore.QRect(584, 72, 94, 128))
         self.db_plus_4.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -275,11 +279,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_plus_4.setText("")
-        self.db_plus_4.setIcon(icon)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("assets/card_plus_4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_plus_4.setIcon(icon3)
         self.db_plus_4.setIconSize(QtCore.QSize(94, 128))
         self.db_plus_4.setObjectName("db_plus_4")
         self.db_plus_5 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_plus_5.setGeometry(QtCore.QRect(694, 80, 94, 128))
+        self.db_plus_5.setGeometry(QtCore.QRect(694, 72, 94, 128))
         self.db_plus_5.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -293,11 +299,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_plus_5.setText("")
-        self.db_plus_5.setIcon(icon)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("assets/card_plus_5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_plus_5.setIcon(icon4)
         self.db_plus_5.setIconSize(QtCore.QSize(94, 128))
         self.db_plus_5.setObjectName("db_plus_5")
         self.db_plus_6 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_plus_6.setGeometry(QtCore.QRect(804, 80, 94, 128))
+        self.db_plus_6.setGeometry(QtCore.QRect(804, 72, 94, 128))
         self.db_plus_6.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -311,11 +319,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_plus_6.setText("")
-        self.db_plus_6.setIcon(icon)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("assets/card_plus_6.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_plus_6.setIcon(icon5)
         self.db_plus_6.setIconSize(QtCore.QSize(94, 128))
         self.db_plus_6.setObjectName("db_plus_6")
         self.db_minus_1 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_minus_1.setGeometry(QtCore.QRect(254, 224, 94, 128))
+        self.db_minus_1.setGeometry(QtCore.QRect(254, 216, 94, 128))
         self.db_minus_1.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -329,11 +339,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_minus_1.setText("")
-        self.db_minus_1.setIcon(icon)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("assets/card_minus_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_minus_1.setIcon(icon6)
         self.db_minus_1.setIconSize(QtCore.QSize(94, 128))
         self.db_minus_1.setObjectName("db_minus_1")
         self.db_minus_2 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_minus_2.setGeometry(QtCore.QRect(364, 224, 94, 128))
+        self.db_minus_2.setGeometry(QtCore.QRect(364, 216, 94, 128))
         self.db_minus_2.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -347,11 +359,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_minus_2.setText("")
-        self.db_minus_2.setIcon(icon)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap("assets/card_minus_2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_minus_2.setIcon(icon7)
         self.db_minus_2.setIconSize(QtCore.QSize(94, 128))
         self.db_minus_2.setObjectName("db_minus_2")
         self.db_minus_3 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_minus_3.setGeometry(QtCore.QRect(474, 224, 94, 128))
+        self.db_minus_3.setGeometry(QtCore.QRect(474, 216, 94, 128))
         self.db_minus_3.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -365,11 +379,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_minus_3.setText("")
-        self.db_minus_3.setIcon(icon)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("assets/card_minus_3.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_minus_3.setIcon(icon8)
         self.db_minus_3.setIconSize(QtCore.QSize(94, 128))
         self.db_minus_3.setObjectName("db_minus_3")
         self.db_minus_4 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_minus_4.setGeometry(QtCore.QRect(584, 224, 94, 128))
+        self.db_minus_4.setGeometry(QtCore.QRect(584, 216, 94, 128))
         self.db_minus_4.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -383,11 +399,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_minus_4.setText("")
-        self.db_minus_4.setIcon(icon)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("assets/card_minus_4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_minus_4.setIcon(icon9)
         self.db_minus_4.setIconSize(QtCore.QSize(94, 128))
         self.db_minus_4.setObjectName("db_minus_4")
         self.db_minus_5 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_minus_5.setGeometry(QtCore.QRect(694, 224, 94, 128))
+        self.db_minus_5.setGeometry(QtCore.QRect(694, 216, 94, 128))
         self.db_minus_5.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -401,11 +419,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_minus_5.setText("")
-        self.db_minus_5.setIcon(icon)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("assets/card_minus_5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_minus_5.setIcon(icon10)
         self.db_minus_5.setIconSize(QtCore.QSize(94, 128))
         self.db_minus_5.setObjectName("db_minus_5")
         self.db_minus_6 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_minus_6.setGeometry(QtCore.QRect(804, 224, 94, 128))
+        self.db_minus_6.setGeometry(QtCore.QRect(804, 216, 94, 128))
         self.db_minus_6.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -419,11 +439,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_minus_6.setText("")
-        self.db_minus_6.setIcon(icon)
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap("assets/card_minus_6.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_minus_6.setIcon(icon11)
         self.db_minus_6.setIconSize(QtCore.QSize(94, 128))
         self.db_minus_6.setObjectName("db_minus_6")
         self.db_dual_1 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_dual_1.setGeometry(QtCore.QRect(254, 368, 94, 128))
+        self.db_dual_1.setGeometry(QtCore.QRect(254, 360, 94, 128))
         self.db_dual_1.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -437,11 +459,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_dual_1.setText("")
-        self.db_dual_1.setIcon(icon)
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap("assets/card_dual_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_dual_1.setIcon(icon12)
         self.db_dual_1.setIconSize(QtCore.QSize(94, 128))
         self.db_dual_1.setObjectName("db_dual_1")
         self.db_dual_2 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_dual_2.setGeometry(QtCore.QRect(364, 368, 94, 128))
+        self.db_dual_2.setGeometry(QtCore.QRect(364, 360, 94, 128))
         self.db_dual_2.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -455,11 +479,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_dual_2.setText("")
-        self.db_dual_2.setIcon(icon)
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap("assets/card_dual_2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_dual_2.setIcon(icon13)
         self.db_dual_2.setIconSize(QtCore.QSize(94, 128))
         self.db_dual_2.setObjectName("db_dual_2")
         self.db_dual_3 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_dual_3.setGeometry(QtCore.QRect(474, 368, 94, 128))
+        self.db_dual_3.setGeometry(QtCore.QRect(474, 360, 94, 128))
         self.db_dual_3.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -473,11 +499,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_dual_3.setText("")
-        self.db_dual_3.setIcon(icon)
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap("assets/card_dual_3.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_dual_3.setIcon(icon14)
         self.db_dual_3.setIconSize(QtCore.QSize(94, 128))
         self.db_dual_3.setObjectName("db_dual_3")
         self.db_dual_4 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_dual_4.setGeometry(QtCore.QRect(586, 368, 94, 128))
+        self.db_dual_4.setGeometry(QtCore.QRect(586, 360, 94, 128))
         self.db_dual_4.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -491,11 +519,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_dual_4.setText("")
-        self.db_dual_4.setIcon(icon)
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap("assets/card_dual_4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_dual_4.setIcon(icon15)
         self.db_dual_4.setIconSize(QtCore.QSize(94, 128))
         self.db_dual_4.setObjectName("db_dual_4")
         self.db_dual_5 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_dual_5.setGeometry(QtCore.QRect(694, 368, 94, 128))
+        self.db_dual_5.setGeometry(QtCore.QRect(694, 360, 94, 128))
         self.db_dual_5.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -509,11 +539,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_dual_5.setText("")
-        self.db_dual_5.setIcon(icon)
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap("assets/card_dual_5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_dual_5.setIcon(icon16)
         self.db_dual_5.setIconSize(QtCore.QSize(94, 128))
         self.db_dual_5.setObjectName("db_dual_5")
         self.db_dual_6 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_dual_6.setGeometry(QtCore.QRect(804, 368, 94, 128))
+        self.db_dual_6.setGeometry(QtCore.QRect(804, 360, 94, 128))
         self.db_dual_6.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -527,11 +559,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_dual_6.setText("")
-        self.db_dual_6.setIcon(icon)
+        icon17 = QtGui.QIcon()
+        icon17.addPixmap(QtGui.QPixmap("assets/card_dual_6.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_dual_6.setIcon(icon17)
         self.db_dual_6.setIconSize(QtCore.QSize(94, 128))
         self.db_dual_6.setObjectName("db_dual_6")
         self.db_btn_random = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_btn_random.setGeometry(QtCore.QRect(630, 786, 180, 40))
+        self.db_btn_random.setGeometry(QtCore.QRect(640, 786, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -557,7 +591,7 @@ class Ui_mw(object):
         self.db_btn_random.setText("RANDOMIZE")
         self.db_btn_random.setObjectName("db_btn_random")
         self.db_btn_clear = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_btn_clear.setGeometry(QtCore.QRect(342, 786, 180, 40))
+        self.db_btn_clear.setGeometry(QtCore.QRect(334, 786, 180, 40))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(12)
@@ -583,7 +617,7 @@ class Ui_mw(object):
         self.db_btn_clear.setText("CLEAR")
         self.db_btn_clear.setObjectName("db_btn_clear")
         self.db_deck_5 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_5.setGeometry(QtCore.QRect(478, 612, 94, 128))
+        self.db_deck_5.setGeometry(QtCore.QRect(478, 620, 94, 128))
         self.db_deck_5.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -597,11 +631,13 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_5.setText("")
-        self.db_deck_5.setIcon(icon)
+        icon18 = QtGui.QIcon()
+        icon18.addPixmap(QtGui.QPixmap("assets/card_base.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.db_deck_5.setIcon(icon18)
         self.db_deck_5.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_5.setObjectName("db_deck_5")
         self.db_deck_4 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_4.setGeometry(QtCore.QRect(376, 612, 94, 128))
+        self.db_deck_4.setGeometry(QtCore.QRect(376, 620, 94, 128))
         self.db_deck_4.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -615,11 +651,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_4.setText("")
-        self.db_deck_4.setIcon(icon)
+        self.db_deck_4.setIcon(icon18)
         self.db_deck_4.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_4.setObjectName("db_deck_4")
         self.db_deck_3 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_3.setGeometry(QtCore.QRect(274, 612, 94, 128))
+        self.db_deck_3.setGeometry(QtCore.QRect(274, 620, 94, 128))
         self.db_deck_3.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -633,11 +669,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_3.setText("")
-        self.db_deck_3.setIcon(icon)
+        self.db_deck_3.setIcon(icon18)
         self.db_deck_3.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_3.setObjectName("db_deck_3")
         self.db_deck_2 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_2.setGeometry(QtCore.QRect(172, 612, 94, 128))
+        self.db_deck_2.setGeometry(QtCore.QRect(172, 620, 94, 128))
         self.db_deck_2.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -651,11 +687,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_2.setText("")
-        self.db_deck_2.setIcon(icon)
+        self.db_deck_2.setIcon(icon18)
         self.db_deck_2.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_2.setObjectName("db_deck_2")
         self.db_deck_1 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_1.setGeometry(QtCore.QRect(70, 612, 94, 128))
+        self.db_deck_1.setGeometry(QtCore.QRect(70, 620, 94, 128))
         self.db_deck_1.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -669,11 +705,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_1.setText("")
-        self.db_deck_1.setIcon(icon)
+        self.db_deck_1.setIcon(icon18)
         self.db_deck_1.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_1.setObjectName("db_deck_1")
         self.db_deck_6 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_6.setGeometry(QtCore.QRect(580, 612, 94, 128))
+        self.db_deck_6.setGeometry(QtCore.QRect(580, 620, 94, 128))
         self.db_deck_6.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -687,11 +723,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_6.setText("")
-        self.db_deck_6.setIcon(icon)
+        self.db_deck_6.setIcon(icon18)
         self.db_deck_6.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_6.setObjectName("db_deck_6")
         self.db_deck_7 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_7.setGeometry(QtCore.QRect(682, 612, 94, 128))
+        self.db_deck_7.setGeometry(QtCore.QRect(682, 620, 94, 128))
         self.db_deck_7.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -705,11 +741,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_7.setText("")
-        self.db_deck_7.setIcon(icon)
+        self.db_deck_7.setIcon(icon18)
         self.db_deck_7.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_7.setObjectName("db_deck_7")
         self.db_deck_8 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_8.setGeometry(QtCore.QRect(784, 612, 94, 128))
+        self.db_deck_8.setGeometry(QtCore.QRect(784, 620, 94, 128))
         self.db_deck_8.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -723,11 +759,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_8.setText("")
-        self.db_deck_8.setIcon(icon)
+        self.db_deck_8.setIcon(icon18)
         self.db_deck_8.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_8.setObjectName("db_deck_8")
         self.db_deck_9 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_9.setGeometry(QtCore.QRect(886, 612, 94, 128))
+        self.db_deck_9.setGeometry(QtCore.QRect(886, 620, 94, 128))
         self.db_deck_9.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -741,11 +777,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_9.setText("")
-        self.db_deck_9.setIcon(icon)
+        self.db_deck_9.setIcon(icon18)
         self.db_deck_9.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_9.setObjectName("db_deck_9")
         self.db_deck_10 = QtWidgets.QPushButton(self.sw_deck_builder)
-        self.db_deck_10.setGeometry(QtCore.QRect(988, 612, 94, 128))
+        self.db_deck_10.setGeometry(QtCore.QRect(988, 620, 94, 128))
         self.db_deck_10.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "}\n"
@@ -759,11 +795,11 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.db_deck_10.setText("")
-        self.db_deck_10.setIcon(icon)
+        self.db_deck_10.setIcon(icon18)
         self.db_deck_10.setIconSize(QtCore.QSize(94, 128))
         self.db_deck_10.setObjectName("db_deck_10")
         self.temp_db_text_available = QtWidgets.QLabel(self.sw_deck_builder)
-        self.temp_db_text_available.setGeometry(QtCore.QRect(458, 26, 236, 32))
+        self.temp_db_text_available.setGeometry(QtCore.QRect(458, 22, 236, 32))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(18)
@@ -775,7 +811,7 @@ class Ui_mw(object):
         self.temp_db_text_available.setAlignment(QtCore.Qt.AlignCenter)
         self.temp_db_text_available.setObjectName("temp_db_text_available")
         self.temp_db_text_deck = QtWidgets.QLabel(self.sw_deck_builder)
-        self.temp_db_text_deck.setGeometry(QtCore.QRect(498, 558, 154, 32))
+        self.temp_db_text_deck.setGeometry(QtCore.QRect(498, 570, 154, 32))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(18)
@@ -970,7 +1006,7 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_player_hand_1.setText("")
-        self.gs_player_hand_1.setIcon(icon)
+        self.gs_player_hand_1.setIcon(icon18)
         self.gs_player_hand_1.setIconSize(QtCore.QSize(94, 128))
         self.gs_player_hand_1.setObjectName("gs_player_hand_1")
         self.gs_player_hand_2 = QtWidgets.QPushButton(self.sw_game_screen)
@@ -988,7 +1024,7 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_player_hand_2.setText("")
-        self.gs_player_hand_2.setIcon(icon)
+        self.gs_player_hand_2.setIcon(icon18)
         self.gs_player_hand_2.setIconSize(QtCore.QSize(94, 128))
         self.gs_player_hand_2.setObjectName("gs_player_hand_2")
         self.gs_player_hand_3 = QtWidgets.QPushButton(self.sw_game_screen)
@@ -1006,7 +1042,7 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_player_hand_3.setText("")
-        self.gs_player_hand_3.setIcon(icon)
+        self.gs_player_hand_3.setIcon(icon18)
         self.gs_player_hand_3.setIconSize(QtCore.QSize(94, 128))
         self.gs_player_hand_3.setObjectName("gs_player_hand_3")
         self.gs_player_hand_4 = QtWidgets.QPushButton(self.sw_game_screen)
@@ -1024,7 +1060,7 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_player_hand_4.setText("")
-        self.gs_player_hand_4.setIcon(icon)
+        self.gs_player_hand_4.setIcon(icon18)
         self.gs_player_hand_4.setIconSize(QtCore.QSize(94, 128))
         self.gs_player_hand_4.setObjectName("gs_player_hand_4")
         self.gs_opp_hand_1 = QtWidgets.QLabel(self.sw_game_screen)
@@ -1166,9 +1202,9 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_flip_1.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("assets/flip_card.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.gs_flip_1.setIcon(icon1)
+        icon19 = QtGui.QIcon()
+        icon19.addPixmap(QtGui.QPixmap("assets/flip_card.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.gs_flip_1.setIcon(icon19)
         self.gs_flip_1.setIconSize(QtCore.QSize(36, 36))
         self.gs_flip_1.setObjectName("gs_flip_1")
         self.gs_flip_2 = QtWidgets.QPushButton(self.sw_game_screen)
@@ -1186,7 +1222,7 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_flip_2.setText("")
-        self.gs_flip_2.setIcon(icon1)
+        self.gs_flip_2.setIcon(icon19)
         self.gs_flip_2.setIconSize(QtCore.QSize(36, 36))
         self.gs_flip_2.setObjectName("gs_flip_2")
         self.gs_flip_3 = QtWidgets.QPushButton(self.sw_game_screen)
@@ -1204,7 +1240,7 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_flip_3.setText("")
-        self.gs_flip_3.setIcon(icon1)
+        self.gs_flip_3.setIcon(icon19)
         self.gs_flip_3.setIconSize(QtCore.QSize(36, 36))
         self.gs_flip_3.setObjectName("gs_flip_3")
         self.gs_flip_4 = QtWidgets.QPushButton(self.sw_game_screen)
@@ -1222,7 +1258,7 @@ class Ui_mw(object):
 "    border: none;\n"
 "}")
         self.gs_flip_4.setText("")
-        self.gs_flip_4.setIcon(icon1)
+        self.gs_flip_4.setIcon(icon19)
         self.gs_flip_4.setIconSize(QtCore.QSize(36, 36))
         self.gs_flip_4.setObjectName("gs_flip_4")
         self.temp_gs_player_name = QtWidgets.QLabel(self.sw_game_screen)

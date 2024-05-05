@@ -1,15 +1,46 @@
+from random import choice
 from sys import exit
 
+from PyQt5 import QtCore
 from PyQt5 import QtWidgets
+from PyQt5.QtGui import QIcon, QPixmap
 
 from qtd_ui import Ui_mw
+
+
+class Card:
+    MODS = ['-', '+', '-/+']
+    MOD_DICT = {'-': 'minus', '+': 'plus', '-/+': 'dual',
+                'minus': '-', 'plus': '+', 'dual': '-/+'}
+
+    def __init__(self, is_dual: bool, value: int, mod: str = None):
+        self.is_dual = is_dual
+        self.value = value
+        self.mod = mod
+        if self.is_dual:
+            self.active_dual_mod = choice(self.MODS[:2])
+        self.set_img_path()
+    
+    def set_img_path(self, img_path: str):
+        self.img_path = img_path
+
+
+class DeckManager:
+    @classmethod
+    def init_deck_builder(cls):
+        cls.side_deck = [None] * 10
+        # - triggers the UI to clear deck slots and disable play button
+    
+    @classmethod
+    def randomize_deck(cls):
+        ...
 
 
 class GameManager:
     @classmethod
     def start_deck_builder(cls):
+        DeckManager.init_deck_builder()
         UIManager.show_screen(1)
-        ...
 
     @classmethod
     def start_match(cls):
@@ -44,7 +75,7 @@ class UIManager:
 
 
 class Pazaak(QtWidgets.QMainWindow):
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.init_ui()
         self.setup_buttons()
@@ -61,6 +92,8 @@ class Pazaak(QtWidgets.QMainWindow):
         # Deck Builder buttons.
         self.ui.db_btn_back.clicked.connect(lambda: UIManager.show_screen(0))
         self.ui.db_btn_play.clicked.connect(GameManager.start_match)
+        self.ui.db_btn_clear.clicked.connect(DeckManager.init_deck_builder)
+        self.ui.db_btn_random.clicked.connect(DeckManager.randomize_deck)
         # Game Screen buttons.
         self.ui.gs_btn_help.clicked.connect(lambda: UIManager.toggle_help(2))
         self.ui.gs_btn_quit.clicked.connect(lambda: UIManager.show_screen(0))

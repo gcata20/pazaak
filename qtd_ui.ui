@@ -382,7 +382,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>254</x>
-          <y>80</y>
+          <y>72</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -406,7 +406,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_plus_1.png</normaloff>assets/card_plus_1.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -419,7 +419,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>364</x>
-          <y>80</y>
+          <y>72</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -443,7 +443,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_plus_2.png</normaloff>assets/card_plus_2.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -456,7 +456,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>474</x>
-          <y>80</y>
+          <y>72</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -480,7 +480,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_plus_3.png</normaloff>assets/card_plus_3.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -493,7 +493,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>584</x>
-          <y>80</y>
+          <y>72</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -517,7 +517,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_plus_4.png</normaloff>assets/card_plus_4.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -530,7 +530,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>694</x>
-          <y>80</y>
+          <y>72</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -554,7 +554,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_plus_5.png</normaloff>assets/card_plus_5.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -567,7 +567,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>804</x>
-          <y>80</y>
+          <y>72</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -591,7 +591,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_plus_6.png</normaloff>assets/card_plus_6.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -604,7 +604,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>254</x>
-          <y>224</y>
+          <y>216</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -628,7 +628,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_minus_1.png</normaloff>assets/card_minus_1.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -641,7 +641,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>364</x>
-          <y>224</y>
+          <y>216</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -665,7 +665,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_minus_2.png</normaloff>assets/card_minus_2.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -678,7 +678,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>474</x>
-          <y>224</y>
+          <y>216</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -702,7 +702,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_minus_3.png</normaloff>assets/card_minus_3.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -715,7 +715,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>584</x>
-          <y>224</y>
+          <y>216</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -739,7 +739,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_minus_4.png</normaloff>assets/card_minus_4.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -752,7 +752,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>694</x>
-          <y>224</y>
+          <y>216</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -776,7 +776,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_minus_5.png</normaloff>assets/card_minus_5.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -789,7 +789,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>804</x>
-          <y>224</y>
+          <y>216</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -813,7 +813,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_minus_6.png</normaloff>assets/card_minus_6.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -826,7 +826,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>254</x>
-          <y>368</y>
+          <y>360</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -850,7 +850,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_dual_1.png</normaloff>assets/card_dual_1.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -863,7 +863,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>364</x>
-          <y>368</y>
+          <y>360</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -887,7 +887,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_dual_2.png</normaloff>assets/card_dual_2.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -900,7 +900,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>474</x>
-          <y>368</y>
+          <y>360</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -924,7 +924,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_dual_3.png</normaloff>assets/card_dual_3.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -937,7 +937,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>586</x>
-          <y>368</y>
+          <y>360</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -961,7 +961,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_dual_4.png</normaloff>assets/card_dual_4.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -974,7 +974,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>694</x>
-          <y>368</y>
+          <y>360</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -998,7 +998,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_dual_5.png</normaloff>assets/card_dual_5.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -1011,7 +1011,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>804</x>
-          <y>368</y>
+          <y>360</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1035,7 +1035,7 @@ QPushButton:pressed {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>assets/card_base.png</normaloff>assets/card_base.png</iconset>
+          <normaloff>assets/card_dual_6.png</normaloff>assets/card_dual_6.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -1047,7 +1047,7 @@ QPushButton:pressed {
        <widget class="QPushButton" name="db_btn_random">
         <property name="geometry">
          <rect>
-          <x>630</x>
+          <x>640</x>
           <y>786</y>
           <width>180</width>
           <height>40</height>
@@ -1090,7 +1090,7 @@ QPushButton:pressed {
        <widget class="QPushButton" name="db_btn_clear">
         <property name="geometry">
          <rect>
-          <x>342</x>
+          <x>334</x>
           <y>786</y>
           <width>180</width>
           <height>40</height>
@@ -1134,7 +1134,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>478</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1171,7 +1171,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>376</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1208,7 +1208,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>274</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1245,7 +1245,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>172</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1282,7 +1282,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>70</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1319,7 +1319,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>580</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1356,7 +1356,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>682</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1393,7 +1393,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>784</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1430,7 +1430,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>886</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1467,7 +1467,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>988</x>
-          <y>612</y>
+          <y>620</y>
           <width>94</width>
           <height>128</height>
          </rect>
@@ -1504,7 +1504,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>458</x>
-          <y>26</y>
+          <y>22</y>
           <width>236</width>
           <height>32</height>
          </rect>
@@ -1531,7 +1531,7 @@ QPushButton:pressed {
         <property name="geometry">
          <rect>
           <x>498</x>
-          <y>558</y>
+          <y>570</y>
           <width>154</width>
           <height>32</height>
          </rect>
