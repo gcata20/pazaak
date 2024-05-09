@@ -147,6 +147,31 @@ class Match:
     house_deck = []
 
     @classmethod
+    def draw_card(cls, target_slots: list) -> int:
+        """Draw card from the house deck. Show it on screen. Return it.
+
+        Options for the 'target_slots' parameter:
+        - mw.player_table_cards: for the player's list
+        - mw.opp_table_cards: for the opponent's list
+        """
+        drawn_card_value = cls.house_deck.pop()
+        for label in target_slots:
+            if not label.isEnabled():
+                img_path = f'assets/card_basic_{drawn_card_value}.png'
+                UIManager.update_visual(label, True, img_path)
+                break
+        return drawn_card_value
+
+    @classmethod
+    def end_turn(cls):
+        UIManager.toggle_gs_buttons(False)
+        # TODO: check for possible loss condition at turn's end (over 20)
+        if not Opponent.is_standing:
+            qtc.QTimer.singleShot(200, Opponent.play_turn)
+        else:
+            Player.play_turn()
+
+    @classmethod
     def generate_house_deck(cls, shuffles: int = 8) -> None:
         """Generate a list of cards representing the house's deck.
 
@@ -219,7 +244,15 @@ class Match:
 class Opponent(Competitor):
     @classmethod
     def play_turn(cls):
-        ...
+        if not cls.is_standing:
+            drawn_card_value = Match.draw_card(mw.opp_table_cards)
+            Opponent.current_total += drawn_card_value
+            UIManager.update_total(mw.ui.gs_opp_total, Opponent.current_total)
+        # TODO: check draw + opponent decision
+        # - check if last table card slot was filled
+        # - check if total == 20
+        # - check if total > 20 and can play a card that can reduce it under 20
+        qtc.QTimer.singleShot(1000, Player.play_turn)
 
 
 class Player(Competitor):
@@ -229,16 +262,13 @@ class Player(Competitor):
     def play_turn(cls):
         if not cls.is_standing:
             cls.has_played_card = False
-            drawn_card_value = Match.house_deck.pop()
-            for label in mw.player_table_cards:
-                if not label.isEnabled():
-                    img_path = f'assets/card_basic_{drawn_card_value}.png'
-                    UIManager.update_visual(label, True, img_path)
-                    break
+            drawn_card_value = Match.draw_card(mw.player_table_cards)
             Player.current_total += drawn_card_value
-            UIManager.update_total(mw.ui.gs_player_total, drawn_card_value)
+            UIManager.update_total(mw.ui.gs_player_total, Player.current_total)
             UIManager.toggle_gs_buttons(True)
-            # TODO: check if score == 20 or the last table slot was filled...
+            # TODO: check draw + play card logic
+            # - check if last table card slot was filled
+            # - check if total == 20
         else:
             qtc.QTimer.singleShot(100, Opponent.play_turn)
 
@@ -340,6 +370,7 @@ class Pazaak(qtw.QMainWindow):
         # Game Screen buttons and labels.
         self.ui.gs_btn_help.clicked.connect(lambda: GameManager.toggle_help(2))
         self.ui.gs_btn_quit.clicked.connect(lambda: UIManager.show_screen(0))
+        self.ui.gs_btn_endturn.clicked.connect(Match.end_turn)
         self.player_sets = [self.ui.gs_player_set_1,
                             self.ui.gs_player_set_2,
                             self.ui.gs_player_set_3]
