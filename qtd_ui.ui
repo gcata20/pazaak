@@ -2169,7 +2169,7 @@ QPushButton:pressed {
          <string notr="true"/>
         </property>
         <property name="pixmap">
-         <pixmap>assets/card_back.png</pixmap>
+         <pixmap>assets/card_base.png</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="gs_opp_hand_2">
@@ -2188,7 +2188,7 @@ QPushButton:pressed {
          <string notr="true"/>
         </property>
         <property name="pixmap">
-         <pixmap>assets/card_back.png</pixmap>
+         <pixmap>assets/card_base.png</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="gs_opp_hand_3">
@@ -2207,7 +2207,7 @@ QPushButton:pressed {
          <string notr="true"/>
         </property>
         <property name="pixmap">
-         <pixmap>assets/card_back.png</pixmap>
+         <pixmap>assets/card_base.png</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="gs_opp_hand_4">
@@ -2226,7 +2226,7 @@ QPushButton:pressed {
          <string notr="true"/>
         </property>
         <property name="pixmap">
-         <pixmap>assets/card_back.png</pixmap>
+         <pixmap>assets/card_base.png</pixmap>
         </property>
        </widget>
        <widget class="QLabel" name="gs_player_turn">
