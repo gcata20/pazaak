@@ -250,7 +250,7 @@ class Match:
                 img_path = 'assets/flip_card.png'
                 UIManager.update_visual(flip_button, new_img_path=img_path)
             else:
-                UIManager.update_visual(flip_button, new_img_path='')
+                UIManager.update_visual(flip_button, False, '')
         # Show opponent's hand cards.
         card_back_img = 'assets/card_back.png'
         for label in mw.opp_hand_cards:
@@ -323,9 +323,10 @@ class UIManager:
         for i, card in enumerate(Player.hand_cards):
             if card is not None:
                 card_button = mw.player_hand_cards[i]
-                flip_button = mw.player_flip_buttons[i]
                 UIManager.update_visual(card_button, interactible_state)
-                UIManager.update_visual(flip_button, interactible_state)
+                if card.is_dual:
+                    flip_button = mw.player_flip_buttons[i]
+                    UIManager.update_visual(flip_button, interactible_state)
 
     @classmethod
     def update_total(cls, label: qtw.QLabel, value: int):
