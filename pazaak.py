@@ -10,8 +10,6 @@ from qtd_ui import Ui_mw
 
 MODS = ['minus', 'plus', 'dual']
 VALUES = range(1, 7)
-# MOD_DICT = {'-': 'minus', '+': 'plus', '-/+': 'dual',
-#                 'minus': '-', 'plus': '+', 'dual': '-/+'}
 
 
 class Card:
@@ -24,6 +22,20 @@ class Card:
         else:
             self.is_dual = False
         self.set_img_path()
+    
+    def __str__(self) -> str:
+        if not self.is_dual:
+            return f'{self.mod} {self.value}'
+        else:
+            return f'{self.mod} {self.value} ({self.active_dual_mod})'
+    
+    def flip_mod(self):
+        if self.mod == 'dual':
+            if self.active_dual_mod == 'minus':
+                self.active_dual_mod = 'plus'
+            else:
+                self.active_dual_mod = 'minus'
+            self.set_img_path()
     
     def set_img_path(self):
         new_mod = self.mod
@@ -172,6 +184,15 @@ class Match:
             Player.play_turn()
 
     @classmethod
+    def flip_card(cls):
+        sender_index = int(mw.sender().objectName()[-1]) - 1
+        card = Player.hand_cards[sender_index]
+        card.flip_mod()
+        label = mw.player_hand_cards[sender_index]
+        img_path = card.img_path
+        UIManager.update_visual(label, new_img_path=img_path)
+
+    @classmethod
     def generate_house_deck(cls, shuffles: int = 8) -> None:
         """Generate a list of cards representing the house's deck.
 
@@ -200,6 +221,12 @@ class Match:
         for label in card_slots:
             UIManager.update_visual(label, False, '')
     
+    @classmethod
+    def play_hand_card(cls):
+        sender_index = int(mw.sender().objectName()[-1]) - 1
+        card = Player.hand_cards[sender_index]
+        ...
+
     @classmethod
     def start_match(cls):
         """Execute logic for starting a new match."""
@@ -401,8 +428,12 @@ class Pazaak(qtw.QMainWindow):
                                   self.ui.gs_player_hand_2,
                                   self.ui.gs_player_hand_3,
                                   self.ui.gs_player_hand_4]
+        for button in self.player_hand_cards:
+            button.clicked.connect(Match.play_hand_card)
         self.player_flip_buttons = [self.ui.gs_flip_1, self.ui.gs_flip_2,
                                     self.ui.gs_flip_3, self.ui.gs_flip_4]
+        for button in self.player_flip_buttons:
+            button.clicked.connect(Match.flip_card)
         self.opp_hand_cards = [self.ui.gs_opp_hand_1, self.ui.gs_opp_hand_2,
                                self.ui.gs_opp_hand_3, self.ui.gs_opp_hand_4]
         # Help Screen buttons.
