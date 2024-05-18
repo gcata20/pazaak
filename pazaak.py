@@ -18,8 +18,9 @@ class Card:
         self.mod = mod
         if mod == 'dual':
             self.is_dual = True
-            self.active_dual_mod = choice(['minus', 'plus'])
+            self.active_mod = choice(['minus', 'plus'])
         else:
+            self.active_mod = mod
             self.is_dual = False
         self.set_img_path()
     
@@ -27,31 +28,33 @@ class Card:
         if not self.is_dual:
             return f'{self.mod} {self.value}'
         else:
-            return f'{self.mod} {self.value} ({self.active_dual_mod})'
+            return f'{self.mod} {self.value} ({self.active_mod})'
     
     def flip_mod(self):
         if self.mod == 'dual':
-            if self.active_dual_mod == 'minus':
-                self.active_dual_mod = 'plus'
+            if self.active_mod == 'minus':
+                self.active_mod = 'plus'
             else:
-                self.active_dual_mod = 'minus'
+                self.active_mod = 'minus'
             self.set_img_path()
     
     def set_img_path(self):
         new_mod = self.mod
         if self.is_dual:
-            if self.active_dual_mod == 'minus':
+            if self.active_mod == 'minus':
                 new_mod = 'dual_minus'
-            elif self.active_dual_mod == 'plus':
+            elif self.active_mod == 'plus':
                 new_mod = 'dual_plus'
         self.img_path = f'assets/card_{new_mod}_{self.value}.png'
 
 
 class Competitor:
-    current_total = 0
+    total = 0
     side_deck = []
     hand_cards = []
     is_standing = False
+    has_full_table = False
+    sets_won = 0
 
     @classmethod
     def generate_hand(cls):
@@ -133,6 +136,16 @@ class GameManager:
         UIManager.update_visual(button, False, '')
 
     @classmethod
+    def resolve_end(cls):
+        sender_name = mw.sender().objectName()
+        if 'set' in sender_name:
+            mw.ui.popup_set.hide()
+            Match.start_set()
+        elif 'match' in sender_name:
+            mw.ui.popup_match.hide()
+            UIManager.show_screen(0)
+
+    @classmethod
     def to_deck_builder(cls):
         UIManager.show_screen(1)
         cls.init_deck_builder()
@@ -157,31 +170,87 @@ class GameManager:
 
 class Match:
     house_deck = []
+    set_is_over = False
+    match_is_over = False
 
     @classmethod
-    def draw_card(cls, target_slots: list) -> int:
+    def evaluate_turn(cls, caller: str):
+        if Player.total > 20:
+            cls.set_is_over = True
+            Opponent.sets_won += 1
+            mw.ui.text_info_set.setText('You lost the set.')
+        elif Opponent.total > 20:
+            cls.set_is_over = True
+            Player.sets_won += 1
+            mw.ui.text_info_set.setText('You won the set.')
+        elif Player.is_standing and Opponent.is_standing:
+            cls.set_is_over = True
+            if Player.total == Opponent.total:
+                mw.ui.text_info_set.setText('The set is a draw.')
+            elif Player.total > Opponent.total:
+                Player.sets_won += 1
+                mw.ui.text_info_set.setText('You won the set.')
+            elif Player.total < Opponent.total:
+                Opponent.sets_won += 1
+                mw.ui.text_info_set.setText('You lost the set.')
+            
+        if Player.sets_won == 3:
+            cls.match_is_over = True
+            mw.ui.text_info_match.setText('You won the match.')
+        elif Opponent.sets_won == 3:
+            cls.match_is_over = True
+            mw.ui.text_info_match.setText('You lost the match.')
+        
+        if not cls.set_is_over:
+            if caller == 'player':
+                if not Opponent.is_standing:
+                    qtc.QTimer.singleShot(200, Opponent.play_turn)
+                else:
+                    qtc.QTimer.singleShot(800, Player.play_turn)
+            elif caller == 'opponent':
+                if not Player.is_standing:
+                    qtc.QTimer.singleShot(1000, Player.play_turn)
+                else:
+                    qtc.QTimer.singleShot(900, Opponent.play_turn)
+        elif cls.set_is_over and not cls.match_is_over:
+            qtc.QTimer.singleShot(800, mw.ui.popup_set.show)
+        elif cls.match_is_over:
+            qtc.QTimer.singleShot(800, mw.ui.popup_match.show)
+
+    @classmethod
+    def draw_card(cls, target: str) -> int:
         """Draw card from the house deck. Show it on screen. Return it.
 
-        Options for the 'target_slots' parameter:
+        Options for the 'target' parameter:
+        - player
+        - opponent
+
         - mw.player_table_cards: for the player's list
         - mw.opp_table_cards: for the opponent's list
         """
+        if target == 'player':
+            target_slots = mw.player_table_cards
+        elif target == 'opponent':
+            target_slots = mw.opp_table_cards
+        else:
+            raise SyntaxError('Invalid use of the draw_card function.')
         drawn_card_value = cls.house_deck.pop()
         for label in target_slots:
             if not label.isEnabled():
                 img_path = f'assets/card_basic_{drawn_card_value}.png'
                 UIManager.update_visual(label, True, img_path)
+                if label.objectName()[-1] == '9':
+                    if target == 'player':
+                        Player.has_full_table = True
+                    elif target == 'opponent':
+                        Opponent.has_full_table = True
                 break
         return drawn_card_value
 
     @classmethod
     def end_turn(cls):
         UIManager.toggle_gs_buttons(False)
-        # TODO: check for possible loss condition at turn's end (over 20)
-        if not Opponent.is_standing:
-            qtc.QTimer.singleShot(200, Opponent.play_turn)
-        else:
-            Player.play_turn()
+        cls.evaluate_turn('player')
 
     @classmethod
     def flip_card(cls):
@@ -212,8 +281,8 @@ class Match:
         for label in [mw.player_turn, mw.ui.gs_opp_turn]:
             UIManager.update_visual(label, new_img_path='')
         # Scores and score indicators.
-        Player.current_total = 0
-        Opponent.current_total = 0
+        Player.total = 0
+        Opponent.total = 0
         for label in [mw.ui.gs_player_total, mw.ui.gs_opp_total]:
             UIManager.update_total(label, 0)
         # Table card slots.
@@ -223,24 +292,51 @@ class Match:
     
     @classmethod
     def play_hand_card(cls):
+        if Player.has_played_card:
+            return
         sender_index = int(mw.sender().objectName()[-1]) - 1
         card = Player.hand_cards[sender_index]
-        ...
+        for label in mw.player_table_cards:
+            if not label.isEnabled():
+                Player.has_played_card = True
+                UIManager.update_visual(label, True, card.img_path)
+                hand_card_button = mw.player_hand_cards[sender_index]
+                UIManager.update_visual(hand_card_button, False, '')
+                if card.mod == 'dual':
+                    flip_button = mw.player_flip_buttons[sender_index]
+                    UIManager.update_visual(flip_button, False, '')
+                if card.active_mod == 'plus':
+                    Player.total += card.value
+                elif card.active_mod == 'minus':
+                    Player.total -= card.value
+                    if Player.total < 0:
+                        Player.total = 0
+                UIManager.update_total(mw.ui.gs_player_total, Player.total)
+                Player.hand_cards[sender_index] = None
+                break
+
+    @classmethod
+    def stand(cls):
+        Player.is_standing = True
+        cls.end_turn()
 
     @classmethod
     def start_match(cls):
         """Execute logic for starting a new match."""
+        cls.match_is_over = False
         # Generate player and opponent hands.
         Player.generate_hand()
         Opponent.generate_side_deck()
         Opponent.generate_hand()
          # Disable interactible buttons.
         UIManager.toggle_gs_buttons(False)
-        # Initialize set indicators.
+        # Initialize set logic and indicators.
+        Player.sets_won = 0
+        Opponent.sets_won = 0
         set_indicators = mw.player_sets + mw.opp_sets
-        inactive_set_img = 'assets/set_inactive.png'
+        inactive_img = 'assets/set_inactive.png'
         for label in set_indicators:
-            UIManager.update_visual(label, new_img_path=inactive_set_img)
+            UIManager.update_visual(label, new_img_path=inactive_img)
         # Show player's hand cards (and flip icons where applicable).
         for i, button in enumerate(mw.player_hand_cards):
             img_path = Player.hand_cards[i].img_path
@@ -261,25 +357,34 @@ class Match:
     @classmethod
     def start_set(cls):
         """Execute logic for starting a new set."""
+        cls.set_is_over = False
         cls.generate_house_deck()
         cls.init_table()
         Player.is_standing = False
+        Player.has_full_table = False
         Opponent.is_standing = False
+        Opponent.has_full_table = False
         qtc.QTimer.singleShot(500, Player.play_turn)
 
 
 class Opponent(Competitor):
     @classmethod
+    def make_decision(cls):
+        if Player.is_standing and cls.total > Player.total:
+            cls.is_standing = True
+            print('[DEBUG LOG] Opponent is standing.')
+        elif cls.total >= 18:
+            cls.is_standing = True
+            print('[DEBUG LOG] Opponent is standing.')
+
+    @classmethod
     def play_turn(cls):
         if not cls.is_standing:
-            drawn_card_value = Match.draw_card(mw.opp_table_cards)
-            Opponent.current_total += drawn_card_value
-            UIManager.update_total(mw.ui.gs_opp_total, Opponent.current_total)
-        # TODO: check draw + opponent decision
-        # - check if last table card slot was filled
-        # - check if total == 20
-        # - check if total > 20 and can play a card that can reduce it under 20
-        qtc.QTimer.singleShot(1000, Player.play_turn)
+            drawn_card_value = Match.draw_card('opponent')
+            cls.total += drawn_card_value
+            UIManager.update_total(mw.ui.gs_opp_total, cls.total)
+            cls.make_decision()
+            Match.evaluate_turn('opponent')
 
 
 class Player(Competitor):
@@ -287,17 +392,15 @@ class Player(Competitor):
     
     @classmethod
     def play_turn(cls):
-        if not cls.is_standing:
+        if not Player.is_standing:
             cls.has_played_card = False
-            drawn_card_value = Match.draw_card(mw.player_table_cards)
-            Player.current_total += drawn_card_value
-            UIManager.update_total(mw.ui.gs_player_total, Player.current_total)
-            UIManager.toggle_gs_buttons(True)
-            # TODO: check draw + play card logic
-            # - check if last table card slot was filled
-            # - check if total == 20
-        else:
-            qtc.QTimer.singleShot(100, Opponent.play_turn)
+            drawn_card_value = Match.draw_card('player')
+            Player.total += drawn_card_value
+            UIManager.update_total(mw.ui.gs_player_total, Player.total)
+            if Player.total == 20 or Player.has_full_table:
+                Match.stand()
+            else:
+                UIManager.toggle_gs_buttons(True)
 
 
 class UIManager:
@@ -361,13 +464,13 @@ class Pazaak(qtw.QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.init_ui()
-        self.setup_buttons()
+        self.setup_visuals()
     
     def init_ui(self):
         self.ui = Ui_mw()
         self.ui.setupUi(self)
 
-    def setup_buttons(self):
+    def setup_visuals(self):
         # Main Menu buttons.
         self.ui.mm_btn_start.clicked.connect(GameManager.to_deck_builder)
         self.ui.mm_btn_help.clicked.connect(lambda: GameManager.toggle_help(0))
@@ -399,6 +502,7 @@ class Pazaak(qtw.QMainWindow):
         self.ui.gs_btn_help.clicked.connect(lambda: GameManager.toggle_help(2))
         self.ui.gs_btn_quit.clicked.connect(lambda: UIManager.show_screen(0))
         self.ui.gs_btn_endturn.clicked.connect(Match.end_turn)
+        self.ui.gs_btn_stand.clicked.connect(Match.stand)
         self.player_sets = [self.ui.gs_player_set_1,
                             self.ui.gs_player_set_2,
                             self.ui.gs_player_set_3]
@@ -439,6 +543,11 @@ class Pazaak(qtw.QMainWindow):
                                self.ui.gs_opp_hand_3, self.ui.gs_opp_hand_4]
         # Help Screen buttons.
         self.ui.hs_btn_close.clicked.connect(lambda: GameManager.toggle_help(3))
+        # Set and Match Popups.
+        self.ui.btn_ok_set.clicked.connect(GameManager.resolve_end)
+        self.ui.btn_ok_match.clicked.connect(GameManager.resolve_end)
+        self.ui.popup_set.hide()
+        self.ui.popup_match.hide()
 
 
 if __name__ == '__main__':

@@ -2720,6 +2720,373 @@ QPushButton:pressed {
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QFrame" name="popup_match">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1152</width>
+          <height>864</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string notr="true"/>
+        </property>
+        <property name="statusTip">
+         <string notr="true"/>
+        </property>
+        <property name="whatsThis">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(0, 0, 0, 150)</string>
+        </property>
+        <widget class="QFrame" name="frame_match">
+         <property name="geometry">
+          <rect>
+           <x>306</x>
+           <y>304</y>
+           <width>540</width>
+           <height>160</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleName">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleDescription">
+          <string notr="true"/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(0, 0, 0, 180);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="lineWidth">
+          <number>2</number>
+         </property>
+         <widget class="QLabel" name="text_info_match">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>20</y>
+            <width>280</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string notr="true"/>
+          </property>
+          <property name="statusTip">
+           <string notr="true"/>
+          </property>
+          <property name="whatsThis">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleName">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleDescription">
+           <string notr="true"/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string notr="true">&lt;insert match text here&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_ok_match">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>100</y>
+            <width>140</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="statusTip">
+           <string notr="true"/>
+          </property>
+          <property name="whatsThis">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleName">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleDescription">
+           <string notr="true"/>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    border: 2px solid red;
+    color: red;
+}
+
+QPushButton:pressed {
+    border: none;
+}</string>
+          </property>
+          <property name="text">
+           <string notr="true">OK</string>
+          </property>
+          <property name="default">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="popup_set">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1152</width>
+          <height>864</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string notr="true"/>
+        </property>
+        <property name="statusTip">
+         <string notr="true"/>
+        </property>
+        <property name="whatsThis">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleName">
+         <string notr="true"/>
+        </property>
+        <property name="accessibleDescription">
+         <string notr="true"/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(0, 0, 0, 150)</string>
+        </property>
+        <widget class="QFrame" name="frame_set">
+         <property name="geometry">
+          <rect>
+           <x>306</x>
+           <y>304</y>
+           <width>540</width>
+           <height>160</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleName">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleDescription">
+          <string notr="true"/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(0, 0, 0, 180);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="lineWidth">
+          <number>2</number>
+         </property>
+         <widget class="QLabel" name="text_info_set">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>20</y>
+            <width>280</width>
+            <height>60</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string notr="true"/>
+          </property>
+          <property name="statusTip">
+           <string notr="true"/>
+          </property>
+          <property name="whatsThis">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleName">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleDescription">
+           <string notr="true"/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string notr="true">&lt;insert set text here&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_ok_set">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>100</y>
+            <width>140</width>
+            <height>40</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string notr="true"/>
+          </property>
+          <property name="statusTip">
+           <string notr="true"/>
+          </property>
+          <property name="whatsThis">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleName">
+           <string notr="true"/>
+          </property>
+          <property name="accessibleDescription">
+           <string notr="true"/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    border: 2px solid red;
+    color: red;
+}
+
+QPushButton:pressed {
+    border: none;
+}</string>
+          </property>
+          <property name="text">
+           <string notr="true">OK</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <zorder>gs_bg</zorder>
+       <zorder>gs_btn_help</zorder>
+       <zorder>gs_btn_quit</zorder>
+       <zorder>gs_opp_slot_1</zorder>
+       <zorder>gs_opp_slot_2</zorder>
+       <zorder>gs_opp_slot_3</zorder>
+       <zorder>gs_opp_slot_4</zorder>
+       <zorder>gs_opp_slot_5</zorder>
+       <zorder>gs_opp_slot_6</zorder>
+       <zorder>gs_opp_slot_7</zorder>
+       <zorder>gs_opp_slot_8</zorder>
+       <zorder>gs_opp_slot_9</zorder>
+       <zorder>gs_player_slot_1</zorder>
+       <zorder>gs_player_slot_2</zorder>
+       <zorder>gs_player_slot_3</zorder>
+       <zorder>gs_player_slot_4</zorder>
+       <zorder>gs_player_slot_5</zorder>
+       <zorder>gs_player_slot_6</zorder>
+       <zorder>gs_player_slot_7</zorder>
+       <zorder>gs_player_slot_8</zorder>
+       <zorder>gs_player_slot_9</zorder>
+       <zorder>gs_player_hand_1</zorder>
+       <zorder>gs_player_hand_2</zorder>
+       <zorder>gs_player_hand_3</zorder>
+       <zorder>gs_player_hand_4</zorder>
+       <zorder>gs_opp_hand_1</zorder>
+       <zorder>gs_opp_hand_2</zorder>
+       <zorder>gs_opp_hand_3</zorder>
+       <zorder>gs_opp_hand_4</zorder>
+       <zorder>gs_player_turn</zorder>
+       <zorder>gs_opp_turn</zorder>
+       <zorder>gs_player_set_1</zorder>
+       <zorder>gs_player_set_2</zorder>
+       <zorder>gs_player_set_3</zorder>
+       <zorder>gs_opp_set_3</zorder>
+       <zorder>gs_opp_set_2</zorder>
+       <zorder>gs_opp_set_1</zorder>
+       <zorder>gs_btn_endturn</zorder>
+       <zorder>gs_btn_stand</zorder>
+       <zorder>gs_flip_1</zorder>
+       <zorder>gs_flip_2</zorder>
+       <zorder>gs_flip_3</zorder>
+       <zorder>gs_flip_4</zorder>
+       <zorder>temp_gs_player_name</zorder>
+       <zorder>temp_gs_opp_name</zorder>
+       <zorder>gs_player_total</zorder>
+       <zorder>gs_opp_total</zorder>
+       <zorder>popup_set</zorder>
+       <zorder>popup_match</zorder>
       </widget>
       <widget class="QWidget" name="sw_help_screen">
        <widget class="QPushButton" name="hs_btn_close">
