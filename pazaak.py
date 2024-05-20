@@ -211,7 +211,7 @@ class Match:
                 if not Player.is_standing:
                     qtc.QTimer.singleShot(1000, Player.play_turn)
                 else:
-                    qtc.QTimer.singleShot(900, Opponent.play_turn)
+                    qtc.QTimer.singleShot(1000, Opponent.play_turn)
         elif cls.set_is_over and not cls.match_is_over:
             qtc.QTimer.singleShot(800, mw.ui.popup_set.show)
         elif cls.match_is_over:
@@ -314,6 +314,8 @@ class Match:
                 UIManager.update_total(mw.ui.gs_player_total, Player.total)
                 Player.hand_cards[sender_index] = None
                 break
+        if Player.total == 20:
+            cls.stand()
 
     @classmethod
     def stand(cls):
@@ -370,12 +372,12 @@ class Match:
 class Opponent(Competitor):
     @classmethod
     def make_decision(cls):
-        if Player.is_standing and cls.total > Player.total:
-            cls.is_standing = True
-            print('[DEBUG LOG] Opponent is standing.')
-        elif cls.total >= 18:
-            cls.is_standing = True
-            print('[DEBUG LOG] Opponent is standing.')
+        if Player.is_standing:
+            if cls.total > Player.total:
+                cls.is_standing = True
+        else:
+            if cls.total >= 18:
+                cls.is_standing = True
 
     @classmethod
     def play_turn(cls):
